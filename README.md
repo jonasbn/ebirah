@@ -4,6 +4,11 @@ Experimental Docker project for [Dist::Zilla](dzil.org)
 
 [Ebirah](https://en.wikipedia.org/wiki/Ebirah) is one of the [Godzilla characters](https://en.wikipedia.org/wiki/Category:Godzilla_characters)
 
+## Features
+
+- Encapsulates Dist::Zilla and `dzil` in a Docker container, so you do not have to install and maintain Dist::Zilla and all it's magnificent dependencies
+- Offers interaction with the `dzil` command from the comfort of your terminal
+
 The Dockerfile is based on [the official Perl Docker image](https://hub.docker.com/_/perl)
 
 ## Building the Docker Image
