@@ -18,6 +18,24 @@ $ docker build -t ebirah .
 $ docker run --rm -v $PWD:/tmp ebirah
 ```
 
+## Summoning Ebirah
+
+### Using a script
+
+```bash
+#!/bin/bash
+
+# run ebirah docker image in current directory and cleanup the image afterwards
+docker run --rm --volume $PWD:/tmp ebirah "$@"
+```
+
+### Using an alias
+
+```bash
+# run ebirah docker image in current directory and cleanup the image afterwards
+alias ebirah='docker run --rm --volume $PWD:/tmp ebirah'
+```
+
 ## Resources
 
 - [Blog post by Andrew Lock: "Packaging CLI programs into Docker images to avoid dependency hell"](https://andrewlock.net/packaging-cli-programs-into-docker-images-to-avoid-dependency-hell/)
