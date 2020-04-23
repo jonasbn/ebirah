@@ -1,4 +1,5 @@
 # ebirah
+
 Experimental Docker project for Dist::Zilla
 
 [Ebirah](https://en.wikipedia.org/wiki/Ebirah) is one of the [Godzilla characters](https://en.wikipedia.org/wiki/Category:Godzilla_characters)
@@ -14,10 +15,11 @@ $ docker build -t ebirah .
 ## Running the Docker Image
 
 ```bash
-$ docker run --rm ebirah
+$ docker run --rm -v $PWD:/tmp ebirah
 ```
 
 ## Resources
 
 - https://andrewlock.net/packaging-cli-programs-into-docker-images-to-avoid-dependency-hell/
 - [GitHub repository](https://github.com/jonasbn/ebirah)
+- [Docker Documentation: run reference for docker cli](https://docs.docker.com/engine/reference/run/)
