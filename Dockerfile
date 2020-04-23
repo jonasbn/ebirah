@@ -16,7 +16,9 @@ RUN apt-get update -y \
 WORKDIR /usr/src/dzil
 
 # REF: http://dzil.org/
-RUN cpanm Dist::Zilla
+COPY cpanfile .
+RUN cpanm Dist::Zilla \
+    && cpanm --installdeps .
 
 # This is our staging work directory
 WORKDIR /tmp

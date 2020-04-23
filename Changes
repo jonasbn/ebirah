@@ -1,6 +1,6 @@
 Change log for Ebirah
 
-0.1.0 Feature release
+0.1.0 2020-04-23 Feature release
 
 - Initial release
 - Support for very limited use of Dist::Zilla 6.014
