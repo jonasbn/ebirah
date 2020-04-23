@@ -1,0 +1,8 @@
+Change log for Ebirah
+
+0.1.0 Feature release
+
+- Initial release
+- Support for very limited use of Dist::Zilla 6.014
+- No interaction with other related tools like cpanm
+- No support for Dist::Zilla plugins/extensions
