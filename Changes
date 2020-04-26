@@ -1,5 +1,21 @@
 Change log for Ebirah
 
+0.3.0
+
+- Changed the base Docker image to be a non-slim image so we get a    
+  complete toolchain for our Dist::Zilla extensions, what require or 
+  has requirements for XS based distributions
+
+  REF: https://hub.docker.com/_/perl
+
+  The non-slim images are are based on `buildpack-deps`
+
+  REF: https://hub.docker.com/_/buildpack-deps/
+
+- Shell script described in the documentation added to the prototypes 
+  directory for reference
+
+
 0.2.0 2020-04-23 Feature release, update recommended
 
 - Following additions have been made:
@@ -39,6 +55,7 @@ Change log for Ebirah
   - dzil smoke
   - dzil clean
   - parameters seem to be supported, an exhaustive test has not been completed yet
+
 
 0.1.0 2020-04-23 Feature release
 
