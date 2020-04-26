@@ -11,6 +11,8 @@ Experimental Docker project for [Dist::Zilla](dzil.org)
 
 The Dockerfile is based on [the official Perl Docker image](https://hub.docker.com/_/perl)
 
+It is based on the _larger_ image, not the _slim_ version since Dist::Zilla and extensions require a toolchain for XS based Perl distributions.
+
 ## Building the Docker Image
 
 ```bash
@@ -29,6 +31,9 @@ $ docker run --rm -v $PWD:/tmp ebirah
 
 ```bash
 #!/bin/bash
+
+# REF:http://jonasbn.github.io/til/bash/write_safe_shell_scripts.html
+set -euf -o pipefail
 
 # run ebirah docker image in current directory and cleanup the image afterwards
 docker run --rm --volume $PWD:/tmp ebirah "$@"
