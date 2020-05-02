@@ -1,6 +1,6 @@
 # Change log for Ebirah
 
-## 0.3.0
+## 0.3.0 2020-04-26 Feature release, update recommended
 
 - Changed the base Docker image to be a non-slim image so we get a complete toolchain for our Dist::Zilla extensions, what require or has requirements for XS based distributions
 
