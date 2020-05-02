@@ -33,7 +33,9 @@ Please see the documentation at dzil.org for more details on `dzil` use.
 
 Ebirah does not currently support:
 
-- `dzil release`
+- `dzil release` - release the distribution to PAUSE/CPAN
+
+This is on [the roadmap](https://github.com/jonasbn/ebirah/projects/1).
 
 ## Specification
 
@@ -41,23 +43,22 @@ The Docker image is based on [the official Perl Docker image][dockerhubperl], us
 
 It is based on the _larger_ image, not the _slim_ version since Dist::Zilla and extensions require a toolchain for XS based Perl distributions.
 
-## Building ebirah
+### A note on DockerHub
 
-Ebirah is [available on DockerHub][dockerhubebirah], but you can build it yourself based on this repository.
+The images are build from the GitHub repository master branch.
 
-### Building the Docker Image
+The recommended use is to use the latest release with a version tag. See the Change log (ref. `Changes`) for details. Whereas the tag `latest` just reflect the latest build based on the master branch.
 
-```bash
-$ docker build -t ebirah .
-```
-
-### Running the Docker Image
-
-```bash
-$ docker run --rm -v $PWD:/tmp ebirah
-```
+The master branch might contain changes not tagged as released yet and can be regarded as _unstable_ or _experimental_. Changes such as corrections to documentation etc. will not be tagged until separately as a general rule, unless the changes are significant, but the aim is to keep the documentation relevant and up to date.
 
 ## Summoning Ebirah
+
+Ebirah is [available on DockerHub][dockerhubebirah], or you can build it yourself based on this repository, see the section below on building Ebirah.
+
+```bash
+$ docker pull jonasbn/ebirah
+$ docker run --rm --volume $PWD:/tmp jonasbn/ebirah:0.3.0
+```
 
 ### Using a script
 
@@ -70,14 +71,30 @@ The feature listing assumes the script is named `ebirah`
 set -euf -o pipefail
 
 # run ebirah docker image in current directory and cleanup the image afterwards
-docker run --rm --volume $PWD:/tmp ebirah "$@"
+docker run --rm --volume $PWD:/tmp jonasbn/ebirah "$@"
 ```
 
 ### Using an alias
 
 ```bash
 # run ebirah docker image in current directory and cleanup the image afterwards
-alias ebirah='docker run --rm --volume $PWD:/tmp ebirah'
+alias ebirah='docker run --rm --volume $PWD:/tmp jonasbn/ebirah'
+```
+
+## Building ebirah
+
+If you choose to build the image yourself, the above information has to be adjusted accordingly to reflect the image name
+
+### Building the Docker Image
+
+```bash
+$ docker build -t ebirah .
+```
+
+### Running the Docker Image
+
+```bash
+$ docker run --rm -v $PWD:/tmp ebirah
 ```
 
 ## Resources
