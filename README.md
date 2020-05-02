@@ -47,7 +47,7 @@ It is based on the _larger_ image, not the _slim_ version since Dist::Zilla and 
 
 The images are build from the GitHub repository master branch.
 
-The recommended use is to use the latest release with a version tag. See the Change log (ref. `Changes`) for details. Whereas the tag `latest` just reflect the latest build based on the master branch.
+The recommended use is to use the latest release with a version tag. See `Changelog.md` for details. Whereas the tag `latest` just reflect the latest build based on the master branch.
 
 The master branch might contain changes not tagged as released yet and can be regarded as _unstable_ or _experimental_. Changes such as corrections to documentation etc. will not be tagged until separately as a general rule, unless the changes are significant, but the aim is to keep the documentation relevant and up to date.
 
