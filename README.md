@@ -97,7 +97,7 @@ $ docker build -t ebirah .
 $ docker run --rm -v $PWD:/tmp ebirah
 ```
 
-## Resources
+## Resources and References
 
 - [Blog post by Andrew Lock: "Packaging CLI programs into Docker images to avoid dependency hell"](https://andrewlock.net/packaging-cli-programs-into-docker-images-to-avoid-dependency-hell/)
 - [GitHub repository](https://github.com/jonasbn/ebirah)
