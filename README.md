@@ -56,9 +56,18 @@ The master branch might contain changes not tagged as released yet and can be re
 Ebirah is [available on DockerHub][dockerhubebirah], or you can build it yourself based on this repository, see the section below on building Ebirah.
 
 ```bash
-$ docker pull jonasbn/ebirah
+$ docker pull jonasbn/ebirah:0.3.0
 $ docker run --rm --volume $PWD:/tmp jonasbn/ebirah:0.3.0
 ```
+
+And if you are want the latest build:
+
+```bash
+$ docker pull jonasbn/ebirah:lastest
+$ docker run --rm --volume $PWD:/tmp jonasbn/ebirah:latest
+```
+
+As mentioned `latest` can be considered _unstable_ or _experimental_. Development is kept in branches, but new experimental features might make into master for wider evaluation.
 
 ### Using a script
 
@@ -80,6 +89,12 @@ docker run --rm --volume $PWD:/tmp jonasbn/ebirah "$@"
 # run ebirah docker image in current directory and cleanup the image afterwards
 alias ebirah='docker run --rm --volume $PWD:/tmp jonasbn/ebirah'
 ```
+
+## Diagnostics
+
+### `Cannot detect source of 'xt'!``
+
+If you are using the `xtest` command and the `xt` directory does either not exist or does not contain any tests.
 
 ## Building ebirah
 
