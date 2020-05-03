@@ -1,5 +1,10 @@
 # Change log for Ebirah
 
+## 0.4.0 2020-05-03 Feature release, update recommended
+
+- Added support for the `xtest` command using:
+  - [Dist::Zilla::App::Command::xtest](https://metacpan.org/pod/Dist::Zilla::App::Command::xtest)
+
 ## 0.3.0 2020-04-26 Feature release, update recommended
 
 - Changed the base Docker image to be a non-slim image so we get a complete toolchain for our Dist::Zilla extensions, what require or has requirements for XS based distributions

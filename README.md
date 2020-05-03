@@ -26,6 +26,7 @@ Ebirah supports all the following Dist::Zilla commands, so you can replace `dzil
 - `ebirah setup` - runs interactive configuration process, resulting in `$HOME/.dzil/config.ini` file
 - `ebirah run` - runs a executable in the context of the distribution
 - `ebirah nop` - a _no-operation_ primarily for diagnostic purposes
+- `ebirah xtest` - tests the build using the contents of the `xt` directory
 
 All command options are supported.
 
@@ -56,8 +57,8 @@ The master branch might contain changes not tagged as released yet and can be re
 Ebirah is [available on DockerHub][dockerhubebirah], or you can build it yourself based on this repository, see the section below on building Ebirah.
 
 ```bash
-$ docker pull jonasbn/ebirah:0.3.0
-$ docker run --rm --volume $PWD:/tmp jonasbn/ebirah:0.3.0
+$ docker pull jonasbn/ebirah:0.4.0
+$ docker run --rm --volume $PWD:/tmp jonasbn/ebirah:0.4.0
 ```
 
 And if you are want the latest build:
