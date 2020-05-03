@@ -23,7 +23,6 @@ Ebirah supports all the following Dist::Zilla commands, so you can replace `dzil
 - `ebirah add` - adds an additional component to the distribution
 - `ebirah listdeps` - lists runtime dependencies for the distribution
 - `ebirah authordeps` - lists Dist::Zilla dependencies used the toolchain, Ebirah in this case
-- `ebirah setup` - runs interactive configuration process, resulting in `$HOME/.dzil/config.ini` file
 - `ebirah run` - runs a executable in the context of the distribution
 - `ebirah nop` - a _no-operation_ primarily for diagnostic purposes
 - `ebirah xtest` - tests the build using the contents of the `xt` directory
@@ -34,7 +33,8 @@ Please see the documentation at dzil.org for more details on `dzil` use.
 
 Ebirah does not currently support:
 
-- `dzil release` - release the distribution to PAUSE/CPAN
+- `ebirah release` - release the distribution to PAUSE/CPAN
+- `ebirah setup` - runs interactive configuration process, resulting in `$HOME/.dzil/config.ini` file
 
 This is on [the roadmap](https://github.com/jonasbn/ebirah/projects/1).
 
@@ -111,7 +111,7 @@ If you are executing the `setup` command and you have forgotten to o invoke the 
 Invalid selection, please try again: Invalid selection, please try again:
 ```
 
-1. Add `--volume` as specified in the documentation to your invocation
+For now the `setup` command is not supported.
 
 ```bash
 docker run --rm --volume $PWD:/tmp jonasbn/ebirah'
