@@ -93,9 +93,47 @@ alias ebirah='docker run --rm --volume $PWD:/tmp jonasbn/ebirah'
 
 ## Diagnostics
 
-### `Cannot detect source of 'xt'!``
+### `no configuration (e.g, dist.ini)`
 
-If you are using the `xtest` command and the `xt` directory does either not exist or does not contain any tests.
+This error indicates that you have forgotten to invoke the Docker command with `--volume`
+
+1. Add `--volume` as specified in the documentation to your invocation
+
+```bash
+docker run --rm --volume $PWD:/tmp jonasbn/ebirah'
+```
+
+### `Invalid selection, please try again:`
+
+If you are executing the `setup` command and you have forgotten to o invoke the Docker command with `--volume`. You will get a lot of repeated messages:
+
+```text
+Invalid selection, please try again: Invalid selection, please try again:
+```
+
+1. Add `--volume` as specified in the documentation to your invocation
+
+```bash
+docker run --rm --volume $PWD:/tmp jonasbn/ebirah'
+```
+
+Also you have to shut down the running container with the Docker `kill` command:
+
+```bash
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+240e33386a0b        ebirah:latest       "dzil setup"        3 seconds ago       Up 1 second                             kind_hopper
+$ docker kill 240e33386a0b
+240e33386a0b
+```
+
+### `Cannot detect source of 'xt'!`
+
+If you are executing the `xtest` command and the `xt` directory does either not exist or does not contain any tests.
+
+1. Either add a `xt` directory with tests
+1. Add tests to your empty `xt` directory
+1. Do not use the `xtest` command since it does not make sense in the context your a running it
 
 ## Building ebirah
 
