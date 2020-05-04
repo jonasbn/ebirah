@@ -7,10 +7,6 @@ FROM perl:5.30
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -y \
     && apt-get install -y --no-install-recommends
-    #ca-certificates \
-    #libssl-dev \
-    #libz-dev \
-    #build-essential
 
 # This is our Dist::Zilla work directory, we do not want to mix this
 # with our staging area
