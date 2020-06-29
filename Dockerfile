@@ -1,7 +1,7 @@
 # REF: https://docs.docker.com/engine/reference/builder/
 
 # REF: https://hub.docker.com/_/perl
-FROM perl:5.30
+FROM perl:5.32.0
 
 # We need C compiler and related tools
 ENV DEBIAN_FRONTEND=noninteractive
