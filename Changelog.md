@@ -1,5 +1,9 @@
 # Change log for Ebirah
 
+## 0.5.0 2020-06-30 Maintenance release, update not required
+
+- dependabot created PR for updating perl in `Dockerfile` from 5.30 to 5.32.0
+
 ## 0.4.0 2020-05-03 Feature release, update recommended
 
 - Added support for the `xtest` command using:
