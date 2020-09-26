@@ -1,5 +1,7 @@
 # REF: https://docs.docker.com/engine/reference/builder/
 
+LABEL org.opencontainers.image.source https://github.com/jonasbn/ebirah
+
 # REF: https://hub.docker.com/_/perl
 FROM perl:5.32.0
 
