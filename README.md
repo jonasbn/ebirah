@@ -38,6 +38,8 @@ Ebirah does not currently support:
 
 This is on [the roadmap](https://github.com/jonasbn/ebirah/projects/1).
 
+Ebirah does also not handle the definition of prerequisites in the `dist.ini` file.
+
 ## Specification
 
 The Docker image is based on [the official Perl Docker image][dockerhubperl], using the latest available stable version of this image. See the `Dockerfile` for details.
