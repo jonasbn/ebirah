@@ -5,6 +5,7 @@ requires 'Dist::Zilla::Plugin::InstallGuide';
 requires 'Dist::Zilla::Plugin::MetaJSON';
 requires 'Dist::Zilla::Plugin::MetaProvides::Package';
 requires 'Dist::Zilla::Plugin::ModuleBuild';
+requires 'Dist::Zilla::Plugin::VersionFromMainModule';
 requires 'Dist::Zilla::Plugin::OurPkgVersion';
 requires 'Dist::Zilla::Plugin::PodCoverageTests';
 requires 'Dist::Zilla::Plugin::PodSyntaxTests';
