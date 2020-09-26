@@ -1,9 +1,9 @@
 # REF: https://docs.docker.com/engine/reference/builder/
-
-LABEL org.opencontainers.image.source https://github.com/jonasbn/ebirah
-
 # REF: https://hub.docker.com/_/perl
 FROM perl:5.32.0
+
+# We point to the original repository for the image
+LABEL org.opencontainers.image.source https://github.com/jonasbn/ebirah
 
 # We need C compiler and related tools
 ENV DEBIAN_FRONTEND=noninteractive
