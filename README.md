@@ -70,7 +70,7 @@ $ docker run --rm --volume $PWD:/tmp jonasbn/ebirah:latest
 
 As mentioned `latest` can be considered _unstable_ or _experimental_. Development is kept in branches, but new experimental features might make into master for wider evaluation.
 
-Using the image [available from GitHub](https://github.com/jonasbn/ebirah/packages) instead of DockerHub:
+Using the image [available from GitHub](https://github.com/jonasbn/ebirah/packages) instead of DockerHub, do note this repository is in beta:
 
 ```bash
 $ docker pull ghcr.io/jonasbn/ebirah:0.6.0
@@ -169,6 +169,7 @@ Do note you can use the shortform `ebirah` for the image name, I just use the fu
 - [DockerHub: Ebirah][dockerhubebirah]
 - [dzil.org](http://dzil.org/)
 - [MetaCPAN: Dist::Zilla](https://metacpan.org/pod/Dist::Zilla)
+- [GitHub: "Getting Started with the GitHub Container Registry](https://docs.github.com/en/free-pro-team@latest/packages/getting-started-with-github-container-registry/about-github-container-registry)
 
 [dockerhubebirah]: https://hub.docker.com/repository/docker/jonasbn/ebirah
 [dockerhubperl]: https://hub.docker.com/_/perl
