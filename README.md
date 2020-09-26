@@ -133,7 +133,7 @@ If you are executing the `xtest` command and the `xt` directory does either not 
 
 1. Either add a `xt` directory with tests
 1. Add tests to your empty `xt` directory
-1. Do not use the `xtest` command since it does not make sense in the context your a running it
+1. Do not use the `xtest` command since it does not make sense in the context you are running
 
 ## Building ebirah
 
