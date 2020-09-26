@@ -1,5 +1,12 @@
 # Change log for Ebirah
 
+## 0.6.0 2020-09-26 Feature release, update not required
+
+- Added support for: [Dist::Zilla::Plugin::VersionFromMainModule](https://metacpan.org/pod/Dist::Zilla::Plugin::VersionFromMainModule)
+  I have some older distributions, but instead of changing them all to adhere to the contemporary usage
+  pattern I decided to be able to handle them, they will be updated eventually, but this is more in the spirit of 
+  Ebirah
+
 ## 0.5.0 2020-06-30 Maintenance release, update not required
 
 - dependabot created PR for updating perl in `Dockerfile` from 5.30 to 5.32.0
