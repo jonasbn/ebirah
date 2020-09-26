@@ -7,6 +7,8 @@
   pattern I decided to be able to handle them, they will be updated eventually, but this is more in the spirit of 
   Ebirah
 
+- Added meta data information to `Dockerfile` so it identifies the repository it originates from
+
 ## 0.5.0 2020-06-30 Maintenance release, update not required
 
 - dependabot created PR for updating perl in `Dockerfile` from 5.30 to 5.32.0
