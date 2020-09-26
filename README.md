@@ -142,14 +142,16 @@ If you choose to build the image yourself, the above information has to be adjus
 ### Building the Docker Image
 
 ```bash
-$ docker build -t ebirah .
+$ docker build -t jonasbn/ebirah .
 ```
 
 ### Running the Docker Image
 
 ```bash
-$ docker run --rm -v $PWD:/tmp ebirah
+$ docker run --rm -v $PWD:/tmp jonasbn/ebirah
 ```
+
+Do note you can use the shortform `ebirah` for the image name, I just use the fully qualified name matching my own usage pattern and the examples and documentation above.
 
 ## Resources and References
 
