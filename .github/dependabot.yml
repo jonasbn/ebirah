@@ -1,14 +1,8 @@
-# Basic dependabot.yml file with
-# minimum configuration for single package manager
-
 version: 2
 updates:
-  # Enable version updates for Docker
-  - package-ecosystem: "docker"
-    # Look for a `Dockerfile` in the `root` directory
-    directory: "/"
-    # Check for updates once a week
-    schedule:
-      interval: "weekly"
-    assignees:
-      - "jonasbn"
+- package-ecosystem: docker
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
