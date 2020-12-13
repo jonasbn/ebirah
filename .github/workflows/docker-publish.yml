@@ -14,6 +14,7 @@ on:
   pull_request:
 
 env:
+  # WARN: the name cannot be separated by / as normal image names
   IMAGE_NAME: ebirah
   REPO_NAME:
 
