@@ -100,6 +100,47 @@ docker run --rm --volume $PWD:/tmp jonasbn/ebirah "$@"
 alias ebirah='docker run --rm --volume $PWD:/tmp jonasbn/ebirah'
 ```
 
+### Using Ebirah for Continuos Integration
+
+Ebirah was built with continuous integration (CI) in mind, meaning that encapsulating Dist::Zilla in a easily distributable container.
+
+First attempt at getting this to work has been implemented as [a GitHub Action](https://github.com/marketplace/actions/github-action-for-perl-s-dist-zilla).
+
+The action can easily be implemented and current relies on Dist::Zilla using repositories.
+
+The GitHub Action performs the following steps:
+
+1. Installs Perl dependencies, specified in the repository (currently only support the presences of a `cpanfile`, this might be extended and/or changed in the future based on requirements)
+1. Executes `dzil` with parameters specified in the GitHub Action configuration
+
+An example configuration:
+
+```yaml
+name: CI Action
+on: push
+
+jobs:
+  build:
+    name: Continuous Integration
+    runs-on: ubuntu-latest
+    steps:
+    # REF: https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow#using-the-checkout-action
+    - name: "Checkout repository"
+      uses: actions/checkout@v2
+    - name: "Installing dependencies and testing all using dzil"
+      uses: jonasbn/github-action-perl-dist-zilla@master
+      with:
+          dzil-arguments: 'test --all'
+```
+
+Lifted from `[.github/workflows/ci.yml](https://github.com/jonasbn/perl-app-yak/blob/master/.github/workflows/ci.yml)` from [App::Yak].
+
+Examples are available here:
+
+- [App::Yak](https://github.com/jonasbn/perl-app-yak)
+
+Please [see the documentation on the GitHub Action for Dist::Zilla]((https://github.com/marketplace/actions/github-action-for-perl-s-dist-zilla)) for more details
+
 ## Diagnostics
 
 ### `no configuration (e.g, dist.ini)`

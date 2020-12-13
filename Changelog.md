@@ -4,8 +4,7 @@
 
 - Added support for: [Dist::Zilla::Plugin::VersionFromMainModule](https://metacpan.org/pod/Dist::Zilla::Plugin::VersionFromMainModule)
   I have some older distributions, but instead of changing them all to adhere to the contemporary usage
-  pattern I decided to be able to handle them, they will be updated eventually, but this is more in the spirit of 
-  Ebirah
+  pattern I decided to be able to handle them, they will be updated eventually, but this is more in the spirit of Ebirah
 
 - Added meta data information to `Dockerfile` so it identifies the repository it originates from
 
