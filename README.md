@@ -133,7 +133,7 @@ jobs:
           dzil-arguments: 'test --all'
 ```
 
-Lifted from `[.github/workflows/ci.yml](https://github.com/jonasbn/perl-app-yak/blob/master/.github/workflows/ci.yml)` from [App::Yak].
+Lifted from `[.github/workflows/ci.yml](https://github.com/jonasbn/perl-app-yak/blob/master/.github/workflows/ci.yml)` from [App::Yak](https://github.com/jonasbn/perl-app-yak/).
 
 Examples are available here:
 
