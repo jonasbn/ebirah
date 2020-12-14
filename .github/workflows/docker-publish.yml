@@ -16,7 +16,7 @@ on:
 env:
   # WARN: the name cannot be separated by / as normal image names
   IMAGE_NAME: ebirah
-  REPO_NAME:
+  REPO_NAME: ghcr.io
 
 jobs:
   # Run tests.
