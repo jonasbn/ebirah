@@ -38,7 +38,6 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/i386,linux/amd64,linux/arm32/v7,linux/arm64/v8,linux/ppc64le,linux/s390x
           push: true
           tags: |
             jonasbn/ebirah:latest
