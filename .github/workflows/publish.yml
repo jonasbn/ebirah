@@ -4,7 +4,8 @@ name: Publish to DockerHub and GitHub
 
 on:
   push:
-    branches: master
+    branches: 
+    - master
 
 jobs:
   multi-registries:
