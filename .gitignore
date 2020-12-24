@@ -24,6 +24,9 @@ Build.bat
 # Module::Install
 inc/
 
+# Carton
+local/
+
 # ExtUtils::MakeMaker
 /blib/
 /_eumm/
