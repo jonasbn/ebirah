@@ -36,3 +36,4 @@ local/
 /MANIFEST.bak
 /pm_to_blib
 /*.zip
+dictionary.dic

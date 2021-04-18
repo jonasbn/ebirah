@@ -36,7 +36,7 @@ Ebirah does not currently support:
 - `ebirah release` - release the distribution to PAUSE/CPAN
 - `ebirah setup` - runs interactive configuration process, resulting in `$HOME/.dzil/config.ini` file
 
-This is on [the roadmap](https://github.com/jonasbn/ebirah/projects/1).
+This is on [the road map](https://github.com/jonasbn/ebirah/projects/1).
 
 Ebirah does also not handle the definition of prerequisites in the `dist.ini` file.
 
@@ -100,7 +100,7 @@ docker run --rm --volume $PWD:/tmp jonasbn/ebirah "$@"
 alias ebirah='docker run --rm --volume $PWD:/tmp jonasbn/ebirah'
 ```
 
-### Using Ebirah for Continuos Integration
+### Using Ebirah for Continuous Integration
 
 Ebirah was built with continuous integration (CI) in mind, meaning that encapsulating Dist::Zilla in a easily distributable container.
 
@@ -201,7 +201,7 @@ $ docker build -t jonasbn/ebirah .
 $ docker run --rm -v $PWD:/tmp jonasbn/ebirah
 ```
 
-Do note you can use the shortform `ebirah` for the image name, I just use the fully qualified name matching my own usage pattern and the examples and documentation above.
+Do note you can use the short-form `ebirah` for the image name, I just use the fully qualified name matching my own usage pattern and the examples and documentation above.
 
 ## Resources and References
 
