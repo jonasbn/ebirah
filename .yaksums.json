@@ -12,7 +12,6 @@
     "dependabot.yml": true,
     "ISSUE_TEMPLATE.md": true,
     "LICENSE": true,
-    "markdownlint.yml": true,
     "PULL_REQUEST_TEMPLATE.md": true,
     "README.md": true,
     "spellcheck.yml": true
