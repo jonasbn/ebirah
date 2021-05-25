@@ -46,3 +46,6 @@ deps
 xtest
 dependabot
 VersionFromMainModule
+EditorConfig
+probot
+todo
