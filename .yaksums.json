@@ -1,4 +1,19 @@
 {
+    ".editorconfig": true,
+    ".markdownlint.json": true,
+    ".spellcheck.yml": true,
+    ".wordlist.txt": true,
+    ".yakignore": true,
+    ".yaksums.json": true,
+    "auto_assign.yml": true,
+    "CHANGELOG.md": true,
     "CODE_OF_CONDUCT.md": true,
-    "LICENSE": true
+    "CONTRIBUTING.md": true,
+    "dependabot.yml": true,
+    "ISSUE_TEMPLATE.md": true,
+    "LICENSE": true,
+    "markdownlint.yml": true,
+    "PULL_REQUEST_TEMPLATE.md": true,
+    "README.md": true,
+    "spellcheck.yml": true
 }
