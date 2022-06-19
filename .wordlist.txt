@@ -49,3 +49,6 @@ VersionFromMainModule
 EditorConfig
 probot
 todo
+kaiju
+namewise
+ZappaZee

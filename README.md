@@ -207,7 +207,7 @@ Do note you can use the short-form `ebirah` for the image name, I just use the f
 
 [Ebirah](https://en.wikipedia.org/wiki/Ebirah) is one of the [Godzilla characters](https://en.wikipedia.org/wiki/Category:Godzilla_characters) ([kaiju](https://en.wikipedia.org/wiki/Kaiju)), since [Dist::Zilla](dzil.org) namewise also originates from the Godzilla ([kaiju](https://en.wikipedia.org/wiki/Kaiju)) universe, Ebirah was a good candidate for a project name with the marine relation, making sense in Docker backdrop.
 
-The logo used is by the artist [Zappazee](https://www.deviantart.com/zappazee). I found it via [Deviant Art](https://www.deviantart.com/) and it is used here with permission.
+The logo used is by the artist [ZappaZee](https://www.deviantart.com/zappazee). I found it via [Deviant Art](https://www.deviantart.com/) and it is used here with permission.
 
 ## Resources and References
 
