@@ -38,3 +38,4 @@ local/
 /*.zip
 dictionary.dic
 ebirah.code-workspace
+.DS_Store
