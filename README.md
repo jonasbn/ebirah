@@ -4,6 +4,10 @@ Experimental Docker project for [Dist::Zilla](dzil.org)
 
 ![ebirah logo](assets/ebirah_by_zappazee.png)
 
+![Markdownlint Action][GHAMKDBADGE]
+![Spellcheck Action][GHASPLLBADGE]
+[![Docker Pulls](https://img.shields.io/docker/pulls/jonasbn/ebirah.svg?style=flat)](https://hub.docker.com/r/jonasbn/ebirah/)
+
 ## Features
 
 - Encapsulates Dist::Zilla and `dzil` in a Docker container, so you do not have to install and maintain Dist::Zilla and all it's magnificent dependencies
@@ -222,3 +226,5 @@ The logo used is by the artist [ZappaZee](https://www.deviantart.com/zappazee). 
 
 [dockerhubebirah]: https://hub.docker.com/repository/docker/jonasbn/ebirah
 [dockerhubperl]: https://hub.docker.com/_/perl
+[GHAMKDBADGE]: https://github.com/jonasbn/ebirah/workflows/Markdownlint%20Action/badge.svg
+[GHASPLLBADGE]: https://github.com/jonasbn/ebirah/workflows/Spellcheck%20Action/badge.svg
