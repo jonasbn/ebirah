@@ -11,8 +11,13 @@ WORKDIR /usr/src/dzil
 
 # REF: http://dzil.org/
 COPY cpanfile .
-RUN cpanm Dist::Zilla \
-    && cpanm --installdeps .
+
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get upgrade -y && apt-get autoremove -y && \
+    apt-get clean -y && rm -rf /var/lib/apt/lists/*
+
+RUN cpanm --notest Dist::Zilla && rm -rf $HOME/.cpanm && rm -rf /tmp/*
+RUN cpanm --installdeps --notest . && rm -rf $HOME/.cpanm && rm -rf /tmp/*
 
 # This is our staging work directory
 WORKDIR /tmp
