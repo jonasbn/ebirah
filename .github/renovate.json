@@ -2,5 +2,5 @@
   "extends": [
     "config:base"
   ],
-  "enabledManagers": ["pre-commit", "dockerfile"]
+  "enabledManagers": ["pre-commit"]
 }
