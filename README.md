@@ -132,12 +132,12 @@ jobs:
     - name: "Checkout repository"
       uses: actions/checkout@v2
     - name: "Installing dependencies and testing all using dzil"
-      uses: jonasbn/github-action-perl-dist-zilla@master
+      uses: jonasbn/github-action-perl-dist-zilla@0.2.0
       with:
           dzil-arguments: 'test --all'
 ```
 
-Lifted from: [`.github/workflows/ci.yml`](https://github.com/jonasbn/perl-app-yak/blob/master/.github/workflows/ci.yml) from [App::Yak](https://github.com/jonasbn/perl-app-yak/).
+Lifted from: [`.github/workflows/ci.yml`](https://github.com/jonasbn/perl-app-yak/blob/master/.github/workflows/ci.yml) from [perl-app-yak](https://github.com/jonasbn/perl-app-yak/).
 
 Examples are available here:
 
@@ -213,7 +213,7 @@ A list of contributors in alphabetical order:
 
 - Alceu Rodrigues de Freitas Junior (@glasswalk3r)
 
-### About
+## About
 
 [Ebirah](https://en.wikipedia.org/wiki/Ebirah) is one of the [Godzilla characters](https://en.wikipedia.org/wiki/Category:Godzilla_characters) ([kaiju](https://en.wikipedia.org/wiki/Kaiju)), since [Dist::Zilla](dzil.org) namewise also originates from the Godzilla ([kaiju](https://en.wikipedia.org/wiki/Kaiju)) universe, Ebirah was a good candidate for a project name with the marine relation, making sense in Docker backdrop.
 
