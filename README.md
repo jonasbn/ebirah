@@ -168,7 +168,7 @@ Invalid selection, please try again: Invalid selection, please try again:
 For now the `setup` command is not supported.
 
 ```bash
-docker run --rm --volume $PWD:/tmp jonasbn/ebirah'
+docker run --rm --volume $PWD:/tmp jonasbn/ebirah
 ```
 
 Also you have to shut down the running container with the Docker `kill` command:
