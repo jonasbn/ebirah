@@ -207,6 +207,12 @@ $ docker run --rm -v $PWD:/tmp jonasbn/ebirah
 
 Do note you can use the short-form `ebirah` for the image name, I just use the fully qualified name matching my own usage pattern and the examples and documentation above.
 
+## Acknowledgements
+
+A list of contributors in alphabetical order:
+
+- Alceu Rodrigues de Freitas Junior (@glasswalk3r)
+
 ### About
 
 [Ebirah](https://en.wikipedia.org/wiki/Ebirah) is one of the [Godzilla characters](https://en.wikipedia.org/wiki/Category:Godzilla_characters) ([kaiju](https://en.wikipedia.org/wiki/Kaiju)), since [Dist::Zilla](dzil.org) namewise also originates from the Godzilla ([kaiju](https://en.wikipedia.org/wiki/Kaiju)) universe, Ebirah was a good candidate for a project name with the marine relation, making sense in Docker backdrop.

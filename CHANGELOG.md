@@ -1,5 +1,19 @@
 # Change log for Ebirah
 
+## 0.7.0 2022-09-03 Maintenance release, update not required
+
+- Improvements to Docker image generation, reducing size via contribution and PR [#46](https://github.com/jonasbn/ebirah/pull/46) from @glasswalk3r
+
+- The base image has been updated several times without releases, the are listed below for information. With this version the image is bumped up to Perl 5.36.0, which should be the latest at the time of writing
+
+  - Renovate updated perl in `Dockerfile` from 5.34.1 to 5.36.0 via PR [#42](https://github.com/jonasbn/ebirah/pull/42)
+
+  - Dependabot updated perl in `Dockerfile` from 5.34.0 to 5.34.1 via PR [#31](https://github.com/jonasbn/ebirah/pull/31)
+
+  - Dependabot updated perl in `Dockerfile` from 5.32.1 to 5.34.0 via PR [#18](https://github.com/jonasbn/ebirah/pull/18)
+
+  - Dependabot updated perl in `Dockerfile` from 5.32.0 to 5.32.1 via PR [#14](https://github.com/jonasbn/ebirah/pull/14)
+
 ## 0.6.0 2020-09-26 Feature release, update not required
 
 - Added support for: [Dist::Zilla::Plugin::VersionFromMainModule](https://metacpan.org/pod/Dist::Zilla::Plugin::VersionFromMainModule)
@@ -10,7 +24,7 @@
 
 ## 0.5.0 2020-06-30 Maintenance release, update not required
 
-- dependabot created PR for updating perl in `Dockerfile` from 5.30 to 5.32.0
+- Dependabot updated perl in `Dockerfile` from 5.30 to 5.32.0 via PR [#9](https://github.com/jonasbn/ebirah/pull/9)
 
 ## 0.4.0 2020-05-03 Feature release, update recommended
 
