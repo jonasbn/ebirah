@@ -64,14 +64,14 @@ Ebirah is [available on DockerHub][dockerhubebirah], or you can build it yoursel
 
 ```bash
 $ docker pull jonasbn/ebirah:0.7.0
-$ docker run --rm --volume $PWD:/tmp jonasbn/ebirah:0.7.0
+$ docker run --rm --volume $PWD:/opt jonasbn/ebirah:0.7.0
 ```
 
 And if you are want the latest build from DockerHub:
 
 ```bash
-$ docker pull jonasbn/ebirah:lastest
-$ docker run --rm --volume $PWD:/tmp jonasbn/ebirah:latest
+$ docker pull jonasbn/ebirah:latest
+$ docker run --rm --volume $PWD:/opt jonasbn/ebirah:latest
 ```
 
 As mentioned `latest` can be considered _unstable_ or _experimental_. Development is kept in branches, but new experimental features might make into master for wider evaluation.
@@ -80,7 +80,7 @@ Using the image [available from GitHub](https://github.com/jonasbn/ebirah/packag
 
 ```bash
 $ docker pull ghcr.io/jonasbn/ebirah:0.7.0
-$ docker run --rm --volume $PWD:/tmp ghcr.io/jonasbn/ebirah:0.7.0
+$ docker run --rm --volume $PWD:/opt ghcr.io/jonasbn/ebirah:0.7.0
 ```
 
 ### Using a script
@@ -94,14 +94,14 @@ The feature listing assumes the script is named `ebirah`
 set -euf -o pipefail
 
 # run ebirah docker image in current directory and cleanup the image afterwards
-docker run --rm --volume $PWD:/tmp jonasbn/ebirah "$@"
+docker run --rm --volume $PWD:/opt jonasbn/ebirah "$@"
 ```
 
 ### Using an alias
 
 ```bash
 # run ebirah docker image in current directory and cleanup the image afterwards
-alias ebirah='docker run --rm --volume $PWD:/tmp jonasbn/ebirah'
+alias ebirah='docker run --rm --volume $PWD:/opt jonasbn/ebirah'
 ```
 
 ### Using Ebirah for Continuous Integration
@@ -154,7 +154,7 @@ This error indicates that you have forgotten to invoke the Docker command with `
 1. Add `--volume` as specified in the documentation to your invocation
 
 ```bash
-docker run --rm --volume $PWD:/tmp jonasbn/ebirah'
+docker run --rm --volume $PWD:/opt jonasbn/ebirah
 ```
 
 ### `Invalid selection, please try again:`
@@ -168,7 +168,7 @@ Invalid selection, please try again: Invalid selection, please try again:
 For now the `setup` command is not supported.
 
 ```bash
-docker run --rm --volume $PWD:/tmp jonasbn/ebirah
+docker run --rm --volume $PWD:/opt jonasbn/ebirah
 ```
 
 Also you have to shut down the running container with the Docker `kill` command:
@@ -202,7 +202,7 @@ $ docker build -t jonasbn/ebirah .
 ### Running the Docker Image
 
 ```bash
-$ docker run --rm -v $PWD:/tmp jonasbn/ebirah
+$ docker run --rm -v $PWD:/opt jonasbn/ebirah
 ```
 
 Do note you can use the short-form `ebirah` for the image name, I just use the fully qualified name matching my own usage pattern and the examples and documentation above.
