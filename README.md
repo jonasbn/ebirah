@@ -159,7 +159,7 @@ docker run --rm --volume $PWD:/opt jonasbn/ebirah
 
 ### `Invalid selection, please try again:`
 
-If you are executing the `setup` command and you have forgotten to o invoke the Docker command with `--volume`. You will get a lot of repeated messages:
+If you are executing the `setup` command and you have forgotten to invoke the Docker command with `--volume`. You will get a lot of repeated messages:
 
 ```text
 Invalid selection, please try again: Invalid selection, please try again:
