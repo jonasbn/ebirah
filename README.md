@@ -212,6 +212,7 @@ Do note you can use the short-form `ebirah` for the image name, I just use the f
 A list of contributors in alphabetical order:
 
 - Alceu Rodrigues de Freitas Junior (@glasswalk3r)
+- Ed Sabol  (@esabol)
 
 ## About
 
