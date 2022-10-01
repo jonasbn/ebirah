@@ -847,150 +847,151 @@ DISTRIBUTIONS
       base 0
       strict 0
       warnings 0
-  Dist-Zilla-6.017
-    pathname: R/RJ/RJBS/Dist-Zilla-6.017.tar.gz
+  Dist-Zilla-6.025
+    pathname: R/RJ/RJBS/Dist-Zilla-6.025.tar.gz
     provides:
-      Dist::Zilla 6.017
-      Dist::Zilla::App 6.017
-      Dist::Zilla::App::Command 6.017
-      Dist::Zilla::App::Command::add 6.017
-      Dist::Zilla::App::Command::authordeps 6.017
-      Dist::Zilla::App::Command::build 6.017
-      Dist::Zilla::App::Command::clean 6.017
-      Dist::Zilla::App::Command::install 6.017
-      Dist::Zilla::App::Command::listdeps 6.017
-      Dist::Zilla::App::Command::new 6.017
-      Dist::Zilla::App::Command::nop 6.017
-      Dist::Zilla::App::Command::release 6.017
-      Dist::Zilla::App::Command::run 6.017
-      Dist::Zilla::App::Command::setup 6.017
-      Dist::Zilla::App::Command::smoke 6.017
-      Dist::Zilla::App::Command::test 6.017
-      Dist::Zilla::App::Command::version 6.017
-      Dist::Zilla::App::Tester 6.017
-      Dist::Zilla::App::Tester::Result 6.017
-      Dist::Zilla::Chrome::Term 6.017
-      Dist::Zilla::Chrome::Test 6.017
-      Dist::Zilla::Dist::Builder 6.017
-      Dist::Zilla::Dist::Minter 6.017
-      Dist::Zilla::File::FromCode 6.017
-      Dist::Zilla::File::InMemory 6.017
-      Dist::Zilla::File::OnDisk 6.017
-      Dist::Zilla::MVP::Assembler 6.017
-      Dist::Zilla::MVP::Assembler::GlobalConfig 6.017
-      Dist::Zilla::MVP::Assembler::Zilla 6.017
-      Dist::Zilla::MVP::Reader::Finder 6.017
-      Dist::Zilla::MVP::Reader::Perl 6.017
-      Dist::Zilla::MVP::RootSection 6.017
-      Dist::Zilla::MVP::Section 6.017
-      Dist::Zilla::MintingProfile::Default 6.017
-      Dist::Zilla::Path 6.017
-      Dist::Zilla::Plugin::AutoPrereqs 6.017
-      Dist::Zilla::Plugin::AutoVersion 6.017
-      Dist::Zilla::Plugin::CPANFile 6.017
-      Dist::Zilla::Plugin::ConfirmRelease 6.017
-      Dist::Zilla::Plugin::DistINI 6.017
-      Dist::Zilla::Plugin::Encoding 6.017
-      Dist::Zilla::Plugin::ExecDir 6.017
-      Dist::Zilla::Plugin::ExtraTests 6.017
-      Dist::Zilla::Plugin::FakeRelease 6.017
-      Dist::Zilla::Plugin::FileFinder::ByName 6.017
-      Dist::Zilla::Plugin::FileFinder::Filter 6.017
-      Dist::Zilla::Plugin::FinderCode 6.017
-      Dist::Zilla::Plugin::GatherDir 6.017
-      Dist::Zilla::Plugin::GatherDir::Template 6.017
-      Dist::Zilla::Plugin::GatherFile 6.017
-      Dist::Zilla::Plugin::GenerateFile 6.017
-      Dist::Zilla::Plugin::InlineFiles 6.017
-      Dist::Zilla::Plugin::License 6.017
-      Dist::Zilla::Plugin::MakeMaker 6.017
-      Dist::Zilla::Plugin::MakeMaker::Runner 6.017
-      Dist::Zilla::Plugin::Manifest 6.017
-      Dist::Zilla::Plugin::ManifestSkip 6.017
-      Dist::Zilla::Plugin::MetaConfig 6.017
-      Dist::Zilla::Plugin::MetaJSON 6.017
-      Dist::Zilla::Plugin::MetaNoIndex 6.017
-      Dist::Zilla::Plugin::MetaResources 6.017
-      Dist::Zilla::Plugin::MetaTests 6.017
-      Dist::Zilla::Plugin::MetaYAML 6.017
-      Dist::Zilla::Plugin::ModuleBuild 6.017
-      Dist::Zilla::Plugin::ModuleShareDirs 6.017
-      Dist::Zilla::Plugin::NextRelease 6.017
-      Dist::Zilla::Plugin::PkgDist 6.017
-      Dist::Zilla::Plugin::PkgVersion 6.017
-      Dist::Zilla::Plugin::PodCoverageTests 6.017
-      Dist::Zilla::Plugin::PodSyntaxTests 6.017
-      Dist::Zilla::Plugin::PodVersion 6.017
-      Dist::Zilla::Plugin::Prereqs 6.017
-      Dist::Zilla::Plugin::PruneCruft 6.017
-      Dist::Zilla::Plugin::PruneFiles 6.017
-      Dist::Zilla::Plugin::Readme 6.017
-      Dist::Zilla::Plugin::RemovePrereqs 6.017
-      Dist::Zilla::Plugin::ShareDir 6.017
-      Dist::Zilla::Plugin::TemplateModule 6.017
-      Dist::Zilla::Plugin::TestRelease 6.017
-      Dist::Zilla::Plugin::UploadToCPAN 6.017
-      Dist::Zilla::PluginBundle::Basic 6.017
-      Dist::Zilla::PluginBundle::Classic 6.017
-      Dist::Zilla::PluginBundle::FakeClassic 6.017
-      Dist::Zilla::PluginBundle::Filter 6.017
-      Dist::Zilla::Prereqs 6.017
-      Dist::Zilla::Role::AfterBuild 6.017
-      Dist::Zilla::Role::AfterMint 6.017
-      Dist::Zilla::Role::AfterRelease 6.017
-      Dist::Zilla::Role::BeforeArchive 6.017
-      Dist::Zilla::Role::BeforeBuild 6.017
-      Dist::Zilla::Role::BeforeMint 6.017
-      Dist::Zilla::Role::BeforeRelease 6.017
-      Dist::Zilla::Role::BuildPL 6.017
-      Dist::Zilla::Role::BuildRunner 6.017
-      Dist::Zilla::Role::Chrome 6.017
-      Dist::Zilla::Role::ConfigDumper 6.017
-      Dist::Zilla::Role::EncodingProvider 6.017
-      Dist::Zilla::Role::ExecFiles 6.017
-      Dist::Zilla::Role::File 6.017
-      Dist::Zilla::Role::FileFinder 6.017
-      Dist::Zilla::Role::FileFinderUser 6.017
-      Dist::Zilla::Role::FileGatherer 6.017
-      Dist::Zilla::Role::FileInjector 6.017
-      Dist::Zilla::Role::FileMunger 6.017
-      Dist::Zilla::Role::FilePruner 6.017
-      Dist::Zilla::Role::InstallTool 6.017
-      Dist::Zilla::Role::LicenseProvider 6.017
-      Dist::Zilla::Role::MetaProvider 6.017
-      Dist::Zilla::Role::MintingProfile 6.017
-      Dist::Zilla::Role::MintingProfile::ShareDir 6.017
-      Dist::Zilla::Role::ModuleMaker 6.017
-      Dist::Zilla::Role::MutableFile 6.017
-      Dist::Zilla::Role::NameProvider 6.017
-      Dist::Zilla::Role::PPI 6.017
-      Dist::Zilla::Role::Plugin 6.017
-      Dist::Zilla::Role::PluginBundle 6.017
-      Dist::Zilla::Role::PluginBundle::Easy 6.017
-      Dist::Zilla::Role::PrereqScanner 6.017
-      Dist::Zilla::Role::PrereqSource 6.017
-      Dist::Zilla::Role::ReleaseStatusProvider 6.017
-      Dist::Zilla::Role::Releaser 6.017
-      Dist::Zilla::Role::ShareDir 6.017
-      Dist::Zilla::Role::Stash 6.017
-      Dist::Zilla::Role::Stash::Authors 6.017
-      Dist::Zilla::Role::Stash::Login 6.017
-      Dist::Zilla::Role::StubBuild 6.017
-      Dist::Zilla::Role::TestRunner 6.017
-      Dist::Zilla::Role::TextTemplate 6.017
-      Dist::Zilla::Role::VersionProvider 6.017
-      Dist::Zilla::Stash::Mint 6.017
-      Dist::Zilla::Stash::PAUSE 6.017
-      Dist::Zilla::Stash::Rights 6.017
-      Dist::Zilla::Stash::User 6.017
-      Dist::Zilla::Tester 6.017
-      Dist::Zilla::Tester::_Builder 6.017
-      Dist::Zilla::Tester::_Minter 6.017
-      Dist::Zilla::Tutorial 6.017
-      Dist::Zilla::Types 6.017
-      Dist::Zilla::Util 6.017
-      Dist::Zilla::Util::AuthorDeps 6.017
-      Test::DZil 6.017
+      Dist::Zilla 6.025
+      Dist::Zilla::App 6.025
+      Dist::Zilla::App::Command 6.025
+      Dist::Zilla::App::Command::add 6.025
+      Dist::Zilla::App::Command::authordeps 6.025
+      Dist::Zilla::App::Command::build 6.025
+      Dist::Zilla::App::Command::clean 6.025
+      Dist::Zilla::App::Command::install 6.025
+      Dist::Zilla::App::Command::listdeps 6.025
+      Dist::Zilla::App::Command::new 6.025
+      Dist::Zilla::App::Command::nop 6.025
+      Dist::Zilla::App::Command::release 6.025
+      Dist::Zilla::App::Command::run 6.025
+      Dist::Zilla::App::Command::setup 6.025
+      Dist::Zilla::App::Command::smoke 6.025
+      Dist::Zilla::App::Command::test 6.025
+      Dist::Zilla::App::Command::version 6.025
+      Dist::Zilla::App::Tester 6.025
+      Dist::Zilla::App::Tester::Result 6.025
+      Dist::Zilla::Chrome::Term 6.025
+      Dist::Zilla::Chrome::Test 6.025
+      Dist::Zilla::Dist::Builder 6.025
+      Dist::Zilla::Dist::Minter 6.025
+      Dist::Zilla::File::FromCode 6.025
+      Dist::Zilla::File::InMemory 6.025
+      Dist::Zilla::File::OnDisk 6.025
+      Dist::Zilla::MVP::Assembler 6.025
+      Dist::Zilla::MVP::Assembler::GlobalConfig 6.025
+      Dist::Zilla::MVP::Assembler::Zilla 6.025
+      Dist::Zilla::MVP::Reader::Finder 6.025
+      Dist::Zilla::MVP::Reader::Perl 6.025
+      Dist::Zilla::MVP::RootSection 6.025
+      Dist::Zilla::MVP::Section 6.025
+      Dist::Zilla::MintingProfile::Default 6.025
+      Dist::Zilla::Path 6.025
+      Dist::Zilla::Plugin::AutoPrereqs 6.025
+      Dist::Zilla::Plugin::AutoVersion 6.025
+      Dist::Zilla::Plugin::CPANFile 6.025
+      Dist::Zilla::Plugin::ConfirmRelease 6.025
+      Dist::Zilla::Plugin::DistINI 6.025
+      Dist::Zilla::Plugin::Encoding 6.025
+      Dist::Zilla::Plugin::ExecDir 6.025
+      Dist::Zilla::Plugin::ExtraTests 6.025
+      Dist::Zilla::Plugin::FakeRelease 6.025
+      Dist::Zilla::Plugin::FileFinder::ByName 6.025
+      Dist::Zilla::Plugin::FileFinder::Filter 6.025
+      Dist::Zilla::Plugin::FinderCode 6.025
+      Dist::Zilla::Plugin::GatherDir 6.025
+      Dist::Zilla::Plugin::GatherDir::Template 6.025
+      Dist::Zilla::Plugin::GatherFile 6.025
+      Dist::Zilla::Plugin::GenerateFile 6.025
+      Dist::Zilla::Plugin::InlineFiles 6.025
+      Dist::Zilla::Plugin::License 6.025
+      Dist::Zilla::Plugin::MakeMaker 6.025
+      Dist::Zilla::Plugin::MakeMaker::Runner 6.025
+      Dist::Zilla::Plugin::Manifest 6.025
+      Dist::Zilla::Plugin::ManifestSkip 6.025
+      Dist::Zilla::Plugin::MetaConfig 6.025
+      Dist::Zilla::Plugin::MetaJSON 6.025
+      Dist::Zilla::Plugin::MetaNoIndex 6.025
+      Dist::Zilla::Plugin::MetaResources 6.025
+      Dist::Zilla::Plugin::MetaTests 6.025
+      Dist::Zilla::Plugin::MetaYAML 6.025
+      Dist::Zilla::Plugin::ModuleBuild 6.025
+      Dist::Zilla::Plugin::ModuleShareDirs 6.025
+      Dist::Zilla::Plugin::NextRelease 6.025
+      Dist::Zilla::Plugin::PkgDist 6.025
+      Dist::Zilla::Plugin::PkgVersion 6.025
+      Dist::Zilla::Plugin::PodCoverageTests 6.025
+      Dist::Zilla::Plugin::PodSyntaxTests 6.025
+      Dist::Zilla::Plugin::PodVersion 6.025
+      Dist::Zilla::Plugin::Prereqs 6.025
+      Dist::Zilla::Plugin::PruneCruft 6.025
+      Dist::Zilla::Plugin::PruneFiles 6.025
+      Dist::Zilla::Plugin::Readme 6.025
+      Dist::Zilla::Plugin::RemovePrereqs 6.025
+      Dist::Zilla::Plugin::ShareDir 6.025
+      Dist::Zilla::Plugin::TemplateModule 6.025
+      Dist::Zilla::Plugin::TestRelease 6.025
+      Dist::Zilla::Plugin::UploadToCPAN 6.025
+      Dist::Zilla::PluginBundle::Basic 6.025
+      Dist::Zilla::PluginBundle::Classic 6.025
+      Dist::Zilla::PluginBundle::FakeClassic 6.025
+      Dist::Zilla::PluginBundle::Filter 6.025
+      Dist::Zilla::Prereqs 6.025
+      Dist::Zilla::Role::AfterBuild 6.025
+      Dist::Zilla::Role::AfterMint 6.025
+      Dist::Zilla::Role::AfterRelease 6.025
+      Dist::Zilla::Role::ArchiveBuilder 6.025
+      Dist::Zilla::Role::BeforeArchive 6.025
+      Dist::Zilla::Role::BeforeBuild 6.025
+      Dist::Zilla::Role::BeforeMint 6.025
+      Dist::Zilla::Role::BeforeRelease 6.025
+      Dist::Zilla::Role::BuildPL 6.025
+      Dist::Zilla::Role::BuildRunner 6.025
+      Dist::Zilla::Role::Chrome 6.025
+      Dist::Zilla::Role::ConfigDumper 6.025
+      Dist::Zilla::Role::EncodingProvider 6.025
+      Dist::Zilla::Role::ExecFiles 6.025
+      Dist::Zilla::Role::File 6.025
+      Dist::Zilla::Role::FileFinder 6.025
+      Dist::Zilla::Role::FileFinderUser 6.025
+      Dist::Zilla::Role::FileGatherer 6.025
+      Dist::Zilla::Role::FileInjector 6.025
+      Dist::Zilla::Role::FileMunger 6.025
+      Dist::Zilla::Role::FilePruner 6.025
+      Dist::Zilla::Role::InstallTool 6.025
+      Dist::Zilla::Role::LicenseProvider 6.025
+      Dist::Zilla::Role::MetaProvider 6.025
+      Dist::Zilla::Role::MintingProfile 6.025
+      Dist::Zilla::Role::MintingProfile::ShareDir 6.025
+      Dist::Zilla::Role::ModuleMaker 6.025
+      Dist::Zilla::Role::MutableFile 6.025
+      Dist::Zilla::Role::NameProvider 6.025
+      Dist::Zilla::Role::PPI 6.025
+      Dist::Zilla::Role::Plugin 6.025
+      Dist::Zilla::Role::PluginBundle 6.025
+      Dist::Zilla::Role::PluginBundle::Easy 6.025
+      Dist::Zilla::Role::PrereqScanner 6.025
+      Dist::Zilla::Role::PrereqSource 6.025
+      Dist::Zilla::Role::ReleaseStatusProvider 6.025
+      Dist::Zilla::Role::Releaser 6.025
+      Dist::Zilla::Role::ShareDir 6.025
+      Dist::Zilla::Role::Stash 6.025
+      Dist::Zilla::Role::Stash::Authors 6.025
+      Dist::Zilla::Role::Stash::Login 6.025
+      Dist::Zilla::Role::StubBuild 6.025
+      Dist::Zilla::Role::TestRunner 6.025
+      Dist::Zilla::Role::TextTemplate 6.025
+      Dist::Zilla::Role::VersionProvider 6.025
+      Dist::Zilla::Stash::Mint 6.025
+      Dist::Zilla::Stash::PAUSE 6.025
+      Dist::Zilla::Stash::Rights 6.025
+      Dist::Zilla::Stash::User 6.025
+      Dist::Zilla::Tester 6.025
+      Dist::Zilla::Tester::_Builder 6.025
+      Dist::Zilla::Tester::_Minter 6.025
+      Dist::Zilla::Tutorial 6.025
+      Dist::Zilla::Types 6.025
+      Dist::Zilla::Util 6.025
+      Dist::Zilla::Util::AuthorDeps 6.025
+      Test::DZil 6.025
     requirements:
       App::Cmd::Command::version 0
       App::Cmd::Setup 0.330
@@ -1004,7 +1005,6 @@ DISTRIBUTIONS
       CPAN::Meta::Validator 2.101550
       CPAN::Uploader 0.103004
       Carp 0
-      Class::Load 0.17
       Config::INI::Reader 0
       Config::MVP 2.200011
       Config::MVP::Assembler 0
@@ -1019,7 +1019,7 @@ DISTRIBUTIONS
       DateTime 0.44
       Digest::MD5 0
       Encode 0
-      ExtUtils::MakeMaker 0
+      ExtUtils::MakeMaker 6.78
       ExtUtils::Manifest 1.66
       File::Copy::Recursive 0.41
       File::Find::Rule 0
@@ -1044,19 +1044,20 @@ DISTRIBUTIONS
       MooseX::Types 0
       MooseX::Types::Moose 0
       MooseX::Types::Perl 0
-      PPI::Document 0
+      PPI::Document 1.222
       Params::Util 0
       Path::Tiny 0.052
       Perl::PrereqScanner 1.016
       Pod::Simple 0
       Scalar::Util 0
-      Software::License 0.103014
+      Software::License 0.104001
       Software::LicenseUtils 0
       String::Formatter 0.100680
       String::RewritePrefix 0.006
       Sub::Exporter 0
       Sub::Exporter::ForMethods 0
       Sub::Exporter::Util 0
+      Term::ANSIColor 5.00
       Term::Encoding 0
       Term::ReadKey 0
       Term::ReadLine 0
@@ -1067,10 +1068,11 @@ DISTRIBUTIONS
       Try::Tiny 0
       YAML::Tiny 0
       autodie 0
+      experimental 0
+      feature 0
       namespace::autoclean 0
       parent 0
-      perl 5.014000
-      strict 0
+      perl 5.020000
       utf8 0
       version 0
       warnings 0
@@ -2136,7 +2138,7 @@ DISTRIBUTIONS
       File::Spec 3.00
       File::Spec::Functions 0
       if 0
-      perl 5.00503
+      perl 5.005030
       strict 0
   Module-Runtime-0.016
     pathname: Z/ZE/ZEFRAM/Module-Runtime-0.016.tar.gz
@@ -3738,45 +3740,46 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Scalar::Util 0
       perl 5.006
-  Software-License-0.103014
-    pathname: L/LE/LEONT/Software-License-0.103014.tar.gz
+  Software-License-0.104002
+    pathname: L/LE/LEONT/Software-License-0.104002.tar.gz
     provides:
-      Software::License 0.103014
-      Software::License::AGPL_3 0.103014
-      Software::License::Apache_1_1 0.103014
-      Software::License::Apache_2_0 0.103014
-      Software::License::Artistic_1_0 0.103014
-      Software::License::Artistic_2_0 0.103014
-      Software::License::BSD 0.103014
-      Software::License::CC0_1_0 0.103014
-      Software::License::Custom 0.103014
-      Software::License::EUPL_1_1 0.103014
-      Software::License::EUPL_1_2 0.103014
-      Software::License::FreeBSD 0.103014
-      Software::License::GFDL_1_2 0.103014
-      Software::License::GFDL_1_3 0.103014
-      Software::License::GPL_1 0.103014
-      Software::License::GPL_2 0.103014
-      Software::License::GPL_3 0.103014
-      Software::License::LGPL_2_1 0.103014
-      Software::License::LGPL_3_0 0.103014
-      Software::License::MIT 0.103014
-      Software::License::Mozilla_1_0 0.103014
-      Software::License::Mozilla_1_1 0.103014
-      Software::License::Mozilla_2_0 0.103014
-      Software::License::None 0.103014
-      Software::License::OpenSSL 0.103014
-      Software::License::Perl_5 0.103014
-      Software::License::PostgreSQL 0.103014
-      Software::License::QPL_1_0 0.103014
-      Software::License::SSLeay 0.103014
-      Software::License::Sun 0.103014
-      Software::License::Zlib 0.103014
-      Software::LicenseUtils 0.103014
+      Software::License 0.104002
+      Software::License::AGPL_3 0.104002
+      Software::License::Apache_1_1 0.104002
+      Software::License::Apache_2_0 0.104002
+      Software::License::Artistic_1_0 0.104002
+      Software::License::Artistic_2_0 0.104002
+      Software::License::BSD 0.104002
+      Software::License::CC0_1_0 0.104002
+      Software::License::Custom 0.104002
+      Software::License::EUPL_1_1 0.104002
+      Software::License::EUPL_1_2 0.104002
+      Software::License::FreeBSD 0.104002
+      Software::License::GFDL_1_2 0.104002
+      Software::License::GFDL_1_3 0.104002
+      Software::License::GPL_1 0.104002
+      Software::License::GPL_2 0.104002
+      Software::License::GPL_3 0.104002
+      Software::License::ISC 0.104002
+      Software::License::LGPL_2_1 0.104002
+      Software::License::LGPL_3_0 0.104002
+      Software::License::MIT 0.104002
+      Software::License::Mozilla_1_0 0.104002
+      Software::License::Mozilla_1_1 0.104002
+      Software::License::Mozilla_2_0 0.104002
+      Software::License::None 0.104002
+      Software::License::OpenSSL 0.104002
+      Software::License::Perl_5 0.104002
+      Software::License::PostgreSQL 0.104002
+      Software::License::QPL_1_0 0.104002
+      Software::License::SSLeay 0.104002
+      Software::License::Sun 0.104002
+      Software::License::Zlib 0.104002
+      Software::LicenseUtils 0.104002
     requirements:
       Carp 0
       Data::Section 0
-      ExtUtils::MakeMaker 0
+      ExtUtils::MakeMaker 6.78
       File::Spec 0
       IO::Dir 0
       Module::Load 0
@@ -4218,7 +4221,7 @@ DISTRIBUTIONS
       Exporter 0
       ExtUtils::MakeMaker 0
       constant 0
-      perl 5.00503
+      perl 5.005030
   Text-Template-1.59
     pathname: M/MS/MSCHOUT/Text-Template-1.59.tar.gz
     provides:

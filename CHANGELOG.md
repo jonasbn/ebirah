@@ -1,5 +1,9 @@
 # Change log for Ebirah
 
+## 0.8.0 2022-10-06 Maintenance release, update recommended
+
+- This release updates the dependency: [Dist::Zilla](https://metacpan.org/pod/Dist::Zilla) from version `6.017` to `6.025`, please see the [change log](https://metacpan.org/dist/Dist-Zilla/changes) of [Dist::Zilla](https://metacpan.org/pod/Dist::Zilla)
+
 ## 0.7.0 2022-09-03 Maintenance release, update not required
 
 - Improvements to Docker image generation, reducing size via contribution and PR [#46](https://github.com/jonasbn/ebirah/pull/46) from @glasswalk3r
