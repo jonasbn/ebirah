@@ -1,6 +1,6 @@
 # Change log for Ebirah
 
-## 0.8.0 2022-10-06 Maintenance release, update recommended
+## 0.8.0 2022-10-02 Maintenance release, update recommended
 
 - This release updates the dependency: [Dist::Zilla](https://metacpan.org/pod/Dist::Zilla) from version `6.017` to `6.025`, please see the [change log](https://metacpan.org/dist/Dist-Zilla/changes) of [Dist::Zilla](https://metacpan.org/pod/Dist::Zilla)
 
