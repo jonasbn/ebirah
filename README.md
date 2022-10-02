@@ -63,15 +63,21 @@ The master branch might contain changes not tagged as released yet and can be re
 Ebirah is [available on DockerHub][dockerhubebirah], or you can build it yourself based on this repository, see the section below on building Ebirah.
 
 ```bash
-$ docker pull jonasbn/ebirah:0.7.0
-$ docker run --rm --volume $PWD:/opt jonasbn/ebirah:0.7.0
+docker pull jonasbn/ebirah:0.7.0
+```
+
+```bash
+docker run --rm --volume $PWD:/opt jonasbn/ebirah:0.7.0
 ```
 
 And if you are want the latest build from DockerHub:
 
 ```bash
-$ docker pull jonasbn/ebirah:latest
-$ docker run --rm --volume $PWD:/opt jonasbn/ebirah:latest
+docker pull jonasbn/ebirah:latest
+```
+
+```bash
+docker run --rm --volume $PWD:/opt jonasbn/ebirah:latest
 ```
 
 As mentioned `latest` can be considered _unstable_ or _experimental_. Development is kept in branches, but new experimental features might make into master for wider evaluation.
@@ -79,8 +85,11 @@ As mentioned `latest` can be considered _unstable_ or _experimental_. Developmen
 Using the image [available from GitHub](https://github.com/jonasbn/ebirah/packages) instead of DockerHub, do note this repository is in beta:
 
 ```bash
-$ docker pull ghcr.io/jonasbn/ebirah:0.7.0
-$ docker run --rm --volume $PWD:/opt ghcr.io/jonasbn/ebirah:0.7.0
+docker pull ghcr.io/jonasbn/ebirah:0.7.0
+```
+
+```bash
+docker run --rm --volume $PWD:/opt ghcr.io/jonasbn/ebirah:0.7.0
 ```
 
 ### Using a script
@@ -196,13 +205,13 @@ If you choose to build the image yourself, the above information has to be adjus
 ### Building the Docker Image
 
 ```bash
-$ docker build -t jonasbn/ebirah .
+docker build -t jonasbn/ebirah .
 ```
 
 ### Running the Docker Image
 
 ```bash
-$ docker run --rm -v $PWD:/opt jonasbn/ebirah
+docker run --rm -v $PWD:/opt jonasbn/ebirah
 ```
 
 Do note you can use the short-form `ebirah` for the image name, I just use the fully qualified name matching my own usage pattern and the examples and documentation above.
