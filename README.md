@@ -139,7 +139,7 @@ jobs:
     steps:
     # REF: https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow#using-the-checkout-action
     - name: "Checkout repository"
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: "Installing dependencies and testing all using dzil"
       uses: jonasbn/github-action-perl-dist-zilla@0.2.0
       with:
