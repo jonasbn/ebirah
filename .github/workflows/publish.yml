@@ -47,7 +47,7 @@ jobs:
             ghcr.io/jonasbn/ebirah:latest
       - 
         name: Docker Hub Description
-        uses: peter-evans/dockerhub-description@v3.1.2
+        uses: peter-evans/dockerhub-description@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
