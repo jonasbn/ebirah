@@ -152,7 +152,7 @@ Examples are available here:
 
 - [App::Yak](https://github.com/jonasbn/perl-app-yak)
 
-Please [see the documentation on the GitHub Action for Dist::Zilla]((https://github.com/marketplace/actions/github-action-for-perl-s-dist-zilla)) for more details
+Please [see the documentation on the GitHub Action for Dist::Zilla](https://github.com/marketplace/actions/github-action-for-perl-s-dist-zilla) for more details
 
 ## Diagnostics
 
