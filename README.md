@@ -1,6 +1,6 @@
 # ebirah
 
-Experimental Docker project for [Dist::Zilla](dzil.org)
+Experimental Docker image for [Dist::Zilla](dzil.org)
 
 ![ebirah logo](assets/ebirah_by_zappazee.png)
 
