@@ -63,11 +63,11 @@ The master branch might contain changes not tagged as released yet and can be re
 Ebirah is [available on DockerHub][dockerhubebirah], or you can build it yourself based on this repository, see the section below on building Ebirah.
 
 ```bash
-docker pull jonasbn/ebirah:0.7.0
+docker pull jonasbn/ebirah:0.8.0
 ```
 
 ```bash
-docker run --rm --volume $PWD:/opt jonasbn/ebirah:0.7.0
+docker run --rm --volume $PWD:/opt jonasbn/ebirah:0.8.0
 ```
 
 And if you are want the latest build from DockerHub:
@@ -85,11 +85,11 @@ As mentioned `latest` can be considered _unstable_ or _experimental_. Developmen
 Using the image [available from GitHub](https://github.com/jonasbn/ebirah/packages) instead of DockerHub, do note this repository is in beta:
 
 ```bash
-docker pull ghcr.io/jonasbn/ebirah:0.7.0
+docker pull ghcr.io/jonasbn/ebirah:0.8.0
 ```
 
 ```bash
-docker run --rm --volume $PWD:/opt ghcr.io/jonasbn/ebirah:0.7.0
+docker run --rm --volume $PWD:/opt ghcr.io/jonasbn/ebirah:0.8.0
 ```
 
 ### Using a script
