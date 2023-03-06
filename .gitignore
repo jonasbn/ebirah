@@ -39,3 +39,8 @@ local/
 dictionary.dic
 ebirah.code-workspace
 .DS_Store
+
+# GitHub Pages
+.jekyll-metadata
+.ruby-version
+_site/
