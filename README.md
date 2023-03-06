@@ -2,8 +2,6 @@
 
 Experimental Docker image for [Dist::Zilla](dzil.org)
 
-![ebirah logo](assets/ebirah_by_zappazee.png)
-
 ![Markdownlint Action][GHAMKDBADGE]
 ![Spellcheck Action][GHASPLLBADGE]
 [![Docker Pulls](https://img.shields.io/docker/pulls/jonasbn/ebirah.svg?style=flat)](https://hub.docker.com/r/jonasbn/ebirah/)
@@ -239,6 +237,8 @@ The logo used is by the artist [ZappaZee](https://www.deviantart.com/zappazee). 
 - [dzil.org](http://dzil.org/)
 - [MetaCPAN: Dist::Zilla](https://metacpan.org/pod/Dist::Zilla)
 - [GitHub: "Getting Started with the GitHub Container Registry](https://docs.github.com/en/free-pro-team@latest/packages/getting-started-with-github-container-registry/about-github-container-registry)
+
+![ebirah logo](assets/ebirah_by_zappazee.png)
 
 [dockerhubebirah]: https://hub.docker.com/repository/docker/jonasbn/ebirah
 [dockerhubperl]: https://hub.docker.com/_/perl
