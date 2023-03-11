@@ -7,12 +7,13 @@
 // REF: https://www.eggradients.com/category/ocean-gradient/ "Deep Water"
 // REF: https://thomaspark.co/projects/fontcdn/ "Splash"
 // REF: https://cssgradient.io/ "Linear Gradient"
+// REF: https://stackoverflow.com/questions/2869212/css3-gradient-background-set-on-body-doesnt-stretch-but-instead-repeats
+
 html {
     min-height: 100%;
 }
 
 body {
-    // background-color: #bddff5;
     background: linear-gradient(0deg, rgba(0,0,0,1) 62%, rgba(15,86,133,1) 82%, rgba(4,97,159,1) 100%);
 }
 
