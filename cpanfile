@@ -20,5 +20,5 @@ requires 'Dist::Zilla::PluginBundle::Basic';
 requires 'Dist::Zilla::PluginBundle::Filter';
 requires 'Software::License::Artistic_2_0';
 requires 'Pod::Coverage::TrustPod';
-requires 'Test::Pod::Coverage', '1.08';
+requires 'Test::Pod::Coverage', '1.10';
 requires 'Dist::Zilla::App::Command::xtest';
