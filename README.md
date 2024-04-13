@@ -8,11 +8,11 @@ Experimental Docker image for [Dist::Zilla](dzil.org)
 
 ## Features
 
-- Encapsulates Dist::Zilla and `dzil` in a Docker container, so you do not have to install and maintain Dist::Zilla and all it's magnificent dependencies
+- Encapsulates `Dist::Zilla` and `dzil` in a Docker container, so you do not have to install and maintain `Dist::Zilla` and all it's magnificent dependencies
 - Offers interaction with the `dzil` command from the comfort of your terminal as `ebirah`
 - It can be used for continuous integration pipelines
 
-Ebirah supports all the following Dist::Zilla commands, so you can replace `dzil` with `ebirah` for using the Docker image (please see the section on summoning Ebirah):
+Ebirah supports all the following `Dist::Zilla` commands, so you can replace `dzil` with `ebirah` for using the Docker image (please see the section on summoning Ebirah):
 
 - `ebirah help` - show helps message
 - `ebirah commands` - lists available commands
@@ -31,7 +31,7 @@ Ebirah supports all the following Dist::Zilla commands, so you can replace `dzil
 
 All command options are supported.
 
-Please see the documentation at dzil.org for more details on `dzil` use.
+Please see the documentation at [dzil.org](https://dzil.org/) for more details on `dzil` use.
 
 Ebirah does not currently support:
 
@@ -46,15 +46,15 @@ Ebirah does also not handle the definition of prerequisites in the `dist.ini` fi
 
 The Docker image is based on [the official Perl Docker image][dockerhubperl], using the latest available stable version of this image. See the `Dockerfile` for details.
 
-It is based on the _larger_ image, not the _slim_ version since Dist::Zilla and extensions require a toolchain for XS based Perl distributions.
+It is based on the _larger_ image, not the _slim_ version since `Dist::Zilla` and extensions require a toolchain for XS based Perl distributions.
 
 ### A note on DockerHub
 
-The images are build from the GitHub repository master branch.
+The images are build from the GitHub repository `master` branch.
 
-The recommended use is to use the latest release with a version tag. See `Changelog.md` for details. Whereas the tag `latest` just reflect the latest build based on the master branch.
+The recommended use is to use the latest release with a version tag. See `Changelog.md` for details. Whereas the tag `latest` just reflect the latest build based on the `master` branch.
 
-The master branch might contain changes not tagged as released yet and can be regarded as _unstable_ or _experimental_. Changes such as corrections to documentation etc. will not be tagged until separately as a general rule, unless the changes are significant, but the aim is to keep the documentation relevant and up to date.
+The `master` branch might contain changes not tagged as released yet and can be regarded as _unstable_ or _experimental_. Changes such as corrections to documentation etc. will not be tagged until separately as a general rule, unless the changes are significant, but the aim is to keep the documentation relevant and up to date.
 
 ## Summoning Ebirah
 
@@ -78,7 +78,7 @@ docker pull jonasbn/ebirah:latest
 docker run --rm --volume $PWD:/opt jonasbn/ebirah:latest
 ```
 
-As mentioned `latest` can be considered _unstable_ or _experimental_. Development is kept in branches, but new experimental features might make into master for wider evaluation.
+As mentioned `latest` can be considered _unstable_ or _experimental_. Development is kept in branches, but new experimental features might make into `master` for wider evaluation.
 
 Using the image [available from GitHub](https://github.com/jonasbn/ebirah/packages) instead of DockerHub, do note this repository is in beta:
 
@@ -113,11 +113,11 @@ alias ebirah='docker run --rm --volume $PWD:/opt jonasbn/ebirah'
 
 ### Using Ebirah for Continuous Integration
 
-Ebirah was built with continuous integration (CI) in mind, meaning that encapsulating Dist::Zilla in a easily distributable container.
+Ebirah was built with continuous integration (CI) in mind, meaning that encapsulating `Dist::Zilla` in a easily distributable container.
 
 First attempt at getting this to work has been implemented as [a GitHub Action](https://github.com/marketplace/actions/github-action-for-perl-s-dist-zilla).
 
-The action can easily be implemented and current relies on Dist::Zilla using repositories.
+The action can easily be implemented and current relies on `Dist::Zilla` using repositories.
 
 The GitHub Action performs the following steps:
 
