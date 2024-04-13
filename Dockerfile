@@ -35,7 +35,7 @@ RUN cpanm --installdeps --notest . && rm -rf "$HOME/.cpanm" && rm -rf /tmp/* && 
 
 # This is our staging work directory
 WORKDIR /tmp
-COPY --chmod=555 entrypoint.sh .
+COPY --chmod=555 entrypoint.sh /opt
 # This is our executable, it consumes all parameters passed to our container
-ENTRYPOINT ["/bin/bash", "/tmp/entrypoint.sh"]
+ENTRYPOINT ["/bin/bash", "/opt/entrypoint.sh"]
 CMD ["version"]
