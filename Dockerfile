@@ -1,10 +1,10 @@
 # REF: https://docs.docker.com/engine/reference/builder/
 # REF: https://hub.docker.com/_/perl
-FROM perl:5.40.0-bullseye
+FROM perl:5.40.0-bookworm
 
 # We point to the original repository for the image
 LABEL org.opencontainers.image.source="https://github.com/jonasbn/ebirah"
-LABEL org.opencontainers.image.base.name="registry.hub.docker.com/library/perl:5.40.0-bullseye"
+LABEL org.opencontainers.image.base.name="registry.hub.docker.com/library/perl:5.40.0-bookworm"
 LABEL org.opencontainers.image.url="https://github.com/jonasbn/ebirah"
 LABEL org.opencontainers.image.title="ebirah"
 LABEL org.opencontainers.image.description="Experimental Docker image for Dist::Zilla"
