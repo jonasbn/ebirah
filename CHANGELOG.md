@@ -1,5 +1,13 @@
 # Change log for Ebirah
 
+## 0.9.0 2024-06-24 Feature release, update recommended
+
+- Via PR [#82](https://github.com/jonasbn/ebirah/pull/82) from @glasswalk3r, the Docker image has been updated to use a non-root user, this is a most welcome security enhancement
+
+- The Docker base image has been updated from Perl 5.38.2 to Perl 5.40.0 via PR [#89](https://github.com/jonasbn/ebirah/pull/89) from @dependabot
+
+- This release updates the dependency: [Dist::Zilla](https://metacpan.org/pod/Dist::Zilla) from version `6.025` to `6.032`, please see the [change log](https://metacpan.org/dist/Dist-Zilla/changes) of [Dist::Zilla](https://metacpan.org/pod/Dist::Zilla)
+
 ## 0.8.0 2022-10-02 Maintenance release, update recommended
 
 - This release updates the dependency: [Dist::Zilla](https://metacpan.org/pod/Dist::Zilla) from version `6.017` to `6.025`, please see the [change log](https://metacpan.org/dist/Dist-Zilla/changes) of [Dist::Zilla](https://metacpan.org/pod/Dist::Zilla)
