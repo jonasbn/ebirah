@@ -14,9 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
-        name: Checkout
-        uses: actions/checkout@v4
-      -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       -
@@ -42,6 +39,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: |
             jonasbn/ebirah:latest
             ghcr.io/jonasbn/ebirah:latest
