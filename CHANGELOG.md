@@ -1,5 +1,9 @@
 # Change log for Ebirah
 
+## 0.10.0 2024-06-24 Maintenance release, update not required
+
+- Bumping base image to Perl 5.40.0 Bookworm instead of Bullseye
+
 ## 0.9.0 2024-06-24 Feature release, update recommended
 
 - Via PR [#82](https://github.com/jonasbn/ebirah/pull/82) from @glasswalk3r, the Docker image has been updated to use a non-root user, this is a most welcome security enhancement
