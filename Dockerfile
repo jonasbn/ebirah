@@ -1,6 +1,6 @@
 # REF: https://docs.docker.com/engine/reference/builder/
 # REF: https://hub.docker.com/_/perl
-FROM perl:5.40.0-slim-bookworm
+FROM perl:5.40.0-bookworm
 
 # We point to the original repository for the image
 LABEL org.opencontainers.image.source="https://github.com/jonasbn/ebirah"
@@ -10,7 +10,7 @@ LABEL org.opencontainers.image.title="ebirah"
 LABEL org.opencontainers.image.description="Experimental Docker image for Dist::Zilla"
 
 ENV DEBIAN_FRONTEND=noninteractive RUNNER_GROUP=distzilla RUNNER_USER=runner
-RUN apt-get update && apt-get upgrade -y && apt-get autoremove -y && \
+RUN apt-get update && apt-get upgrade -y && apt-get install build-essential -y && apt-get autoremove -y && \
     apt-get clean -y && rm -rf /var/lib/apt/lists/* && addgroup "$RUNNER_GROUP" && \
     adduser --ingroup "$RUNNER_GROUP" --home /home/runner --shell /bin/bash \
     --disabled-password --gecos '' runner
