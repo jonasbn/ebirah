@@ -10,7 +10,7 @@ LABEL org.opencontainers.image.title="ebirah"
 LABEL org.opencontainers.image.description="Experimental Docker image for Dist::Zilla"
 
 ENV DEBIAN_FRONTEND=noninteractive RUNNER_GROUP=distzilla RUNNER_USER=runner
-RUN apt-get update && apt-get upgrade -y && apt-get autoremove -y && \
+RUN apt-get update && apt-get upgrade -y && apt-get install build-essential -y && apt-get autoremove -y && \
     apt-get clean -y && rm -rf /var/lib/apt/lists/* && addgroup "$RUNNER_GROUP" && \
     adduser --ingroup "$RUNNER_GROUP" --home /home/runner --shell /bin/bash \
     --disabled-password --gecos '' runner
