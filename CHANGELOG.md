@@ -1,8 +1,8 @@
 # Change log for Ebirah
 
-## 0.10.0 2024-06-24 Maintenance release, update not required
+## 0.10.0 2024-07-03 Maintenance release, update not required
 
-- Bumping base image to Perl 5.40.0 Bookworm instead of Bullseye
+- Bumping base image to Perl 5.40.0 Bookworm instead of Bullseye. See PR [#92](https://github.com/jonasbn/ebirah/pull/92)
 
 ## 0.9.0 2024-06-24 Feature release, update recommended
 
