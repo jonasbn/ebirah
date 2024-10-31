@@ -27,8 +27,8 @@ COPY $LOCAL_LIB_FILE $CPAN_FILE ./
 RUN cpanm --local-lib="$HOME/perl5" 'local::lib' && \
     eval "$(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)" && \
     # probably not required, but let's setup it here
-    cat $LOCAL_LIB_FILE >> $HOME/.bashrc && \
-    source $HOME/.bashrc && \
+    cat $LOCAL_LIB_FILE >> "$HOME/.bashrc" && \
+    source "$HOME/.bashrc" && \
     rm -fv $LOCAL_LIB_FILE
 
 RUN cpanm --notest Dist::Zilla && rm -rf "$HOME/.cpanm" && rm -rf /tmp/*
