@@ -3,15 +3,34 @@ name: Continuous Integration (CI)
 on: [push, pull_request]
 
 jobs:
-  build:
+  documentation:
     name: Checking Markdown integrity and spelling
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
-    - uses: rojopolis/spellcheck-github-actions@0.43.1
-      name: Check spelling in Markdown files
-    - uses: nosborn/github-action-markdown-cli@v3.3.0
-      name: Check Markdown files using Markdownlint
+    - name: Checkout repository
+      uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+    
+    - name: Check spelling in Markdown files
+      uses: rojopolis/spellcheck-github-actions@0.43.1
+      
+    - name: Check Markdown files using Markdownlint
+      uses: nosborn/github-action-markdown-cli@v3.3.0
       with:
         files: .
         config_file: ".markdownlint.json"
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+            
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          push: false
+          platforms: linux/amd64,linux/arm64
+          tags: jonasbn/ebirah:latest
