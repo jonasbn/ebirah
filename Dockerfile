@@ -34,7 +34,6 @@ EOF
 
 RUN cpanm --notest Dist::Zilla && rm -rf "$HOME/.cpanm" && rm -rf /tmp/*
 RUN cpanm --installdeps --notest . && rm -rf "$HOME/.cpanm" && rm -rf /tmp/* && rm -fv "$CPAN_FILE"
-RUN echo $PERL_MM_OPT
 
 # This is our staging work directory
 WORKDIR /tmp
