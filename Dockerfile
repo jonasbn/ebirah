@@ -26,7 +26,7 @@ ENV LOCAL_LIB_FILE=local_lib.txt CPAN_FILE=cpanfile
 COPY $LOCAL_LIB_FILE $CPAN_FILE ./
 RUN <<EOF
 cpanm --local-lib="$HOME/perl5" 'local::lib' && \
-eval "$(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)" && \
+eval "$(perl -I $HOME/perl5/lib/perl5/ -Mlocal::lib)" && \
 # probably not required, but let's setup it here
 cat $LOCAL_LIB_FILE >> "$HOME/.bashrc" && \
 rm -fv $LOCAL_LIB_FILE
