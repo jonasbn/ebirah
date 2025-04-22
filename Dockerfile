@@ -1,6 +1,6 @@
 # REF: https://docs.docker.com/engine/reference/builder/
 # REF: https://hub.docker.com/_/perl
-FROM perl:5.40.1-slim-bookworm
+FROM perl:5.41.10-slim-bookworm
 
 # We point to the original repository for the image
 LABEL org.opencontainers.image.source="https://github.com/jonasbn/ebirah"
