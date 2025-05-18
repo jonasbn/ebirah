@@ -2,7 +2,7 @@
 
 ## 0.12.1 2025-05-18 Bug fix release, update not required
 
-- This fixes a few problems with the Docker build for release 0.12.0
+- This fixes a few problem with use of the wrong pin for the base image, which should be the one available from DockerHub and not GitHub
 
 ## 0.12.0 2025-05-18 Maintenance release, update not required
 
