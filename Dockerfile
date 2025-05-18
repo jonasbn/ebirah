@@ -1,10 +1,14 @@
+FROM perl:5.40.2-slim-bookworm@sha256:c2c67e0f54c53b3d6fca4946292d1a385e9cd119
+
 # REF: https://docs.docker.com/engine/reference/builder/
 # REF: https://hub.docker.com/_/perl
-FROM perl:5.40.2-slim-bookworm
+# REF: https://github.com/Perl/docker-perl
+
+# Tag: r20250415.0
 
 # We point to the original repository for the image
 LABEL org.opencontainers.image.source="https://github.com/jonasbn/ebirah"
-LABEL org.opencontainers.image.base.name="registry.hub.docker.com/library/perl:5.40.0-bookworm"
+LABEL org.opencontainers.image.base.name="registry.hub.docker.com/library/perl:5.40.2-bookworm"
 LABEL org.opencontainers.image.url="https://github.com/jonasbn/ebirah"
 LABEL org.opencontainers.image.title="ebirah"
 LABEL org.opencontainers.image.description="Experimental Docker image for Dist::Zilla"

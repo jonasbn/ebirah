@@ -1,5 +1,11 @@
 # Change log for Ebirah
 
+## 0.12.0 2025-01-28 Maintenance release, update not required
+
+- Bumping base image to Perl 5.40.2, See PR [#120](https://github.com/jonasbn/ebirah/pull/114) from @dependabot
+
+- Attempting with pinned based image, pinned to SHA checksum
+
 ## 0.11.0 2025-01-28 Maintenance release, update not required
 
 - Bumping base image to Perl 5.40.1, See PR [#114](https://github.com/jonasbn/ebirah/pull/114) from @dependabot
