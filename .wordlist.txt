@@ -59,3 +59,4 @@ de
 glasswalk
 Sabol
 esabol
+SHA
