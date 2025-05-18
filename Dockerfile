@@ -1,8 +1,8 @@
 # check=skip=InvalidDefaultArgInFrom
-ARG BASE_IMAGE=perl:5.40.2-slim-bookworm@sha256:c2c67e0f54c53b3d6fca4946292d1a385e9cd119
+ARG BASE_IMAGE=perl:5.40.2-slim-bookworm@sha256:c2c67e0
 FROM ${BASE_IMAGE}
 
-# Tag: r20250415.0
+# Tag: r20250415.0 / c2c67e0f54c53b3d6fca4946292d1a385e9cd119
 
 # REF: https://docs.docker.com/engine/reference/builder/
 # REF: https://hub.docker.com/_/perl
