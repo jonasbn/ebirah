@@ -1,5 +1,5 @@
-# check=skip=InvalidDefaultArgInFrom
-ARG BASE_IMAGE=perl:5.40.2-slim-bookworm
+
+ARG BASE_IMAGE=perl:5.40.2-slim-bookworm@sha256:ffca6fbf5d40c2dc3dac0fc11640e29feaabef54cf274e3d4cb24204ae62ccc2
 FROM ${BASE_IMAGE}
 
 # Tag: r20250415.0 / c2c67e0f54c53b3d6fca4946292d1a385e9cd119
