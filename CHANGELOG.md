@@ -1,6 +1,10 @@
 # Change log for Ebirah
 
-## 0.12.0 2025-01-28 Maintenance release, update not required
+## 0.12.1 2025-05-18 Bug fix release, update not required
+
+- This fixes a few problems with the Docker build for release 0.12.0
+
+## 0.12.0 2025-05-18 Maintenance release, update not required
 
 - Bumping base image to Perl 5.40.2, See PR [#120](https://github.com/jonasbn/ebirah/pull/114) from @dependabot
 

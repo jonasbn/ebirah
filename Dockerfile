@@ -1,10 +1,12 @@
-FROM perl:5.40.2-slim-bookworm@sha256:c2c67e0f54c53b3d6fca4946292d1a385e9cd119
+# check=skip=InvalidDefaultArgInFrom
+ARG BASE_IMAGE=perl:5.40.2-slim-bookworm@sha256:c2c67e0f54c53b3d6fca4946292d1a385e9cd119
+FROM ${BASE_IMAGE}
+
+# Tag: r20250415.0
 
 # REF: https://docs.docker.com/engine/reference/builder/
 # REF: https://hub.docker.com/_/perl
 # REF: https://github.com/Perl/docker-perl
-
-# Tag: r20250415.0
 
 # We point to the original repository for the image
 LABEL org.opencontainers.image.source="https://github.com/jonasbn/ebirah"
