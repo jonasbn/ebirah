@@ -11,29 +11,10 @@ jobs:
       uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
     
     - name: Check spelling in Markdown files
-      uses: rojopolis/spellcheck-github-actions@0.49.0
+      uses: rojopolis/spellcheck-github-actions@584b2ae95998967a53af7fbfb7f5b15352c38748 # 0.49.0
       
     - name: Check Markdown files using Markdownlint
-      uses: nosborn/github-action-markdown-cli@v3.4.0
+      uses: nosborn/github-action-markdown-cli@58bcfd1af530d87a13d51b76e6713b52602e3613 # v3.4.0
       with:
         files: .
         config_file: ".markdownlint.json"
-
-  build:
-    name: Build Docker images
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-      
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-            
-      - name: Build Docker images for multiple platforms without pushing
-        uses: docker/build-push-action@v6
-        with:
-          push: false
-          platforms: linux/amd64,linux/arm64
-          tags: jonasbn/ebirah:latest
-          provenance: false # Disable provenance to avoid unknown/unknown
-          sbom: false       # Disable provenance to avoid unknown/unknown
