@@ -14,7 +14,7 @@ jobs:
       uses: rojopolis/spellcheck-github-actions@584b2ae95998967a53af7fbfb7f5b15352c38748 # 0.49.0
       
     - name: Check Markdown files using Markdownlint
-      uses: nosborn/github-action-markdown-cli@58bcfd1af530d87a13d51b76e6713b52602e3613 # v3.4.0
+      uses: nosborn/github-action-markdown-cli@508d6cefd8f0cc99eab5d2d4685b1d5f470042c1 # v3.5.0
       with:
         files: .
         config_file: ".markdownlint.json"
