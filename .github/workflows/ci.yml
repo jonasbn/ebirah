@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
     
     - name: Check spelling in Markdown files
-      uses: rojopolis/spellcheck-github-actions@35a02bae020e6999c5c37fabaf447f2eb8822ca7 # 0.51.0
+      uses: rojopolis/spellcheck-github-actions@739a1e3ceb79a98a5d4a9bf76f351137f9d78892 # 0.52.0
       
     - name: Check Markdown files using Markdownlint
       uses: nosborn/github-action-markdown-cli@508d6cefd8f0cc99eab5d2d4685b1d5f470042c1 # v3.5.0
