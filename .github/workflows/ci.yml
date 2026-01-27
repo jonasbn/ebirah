@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
-      uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
     
     - name: Check spelling in Markdown files
       uses: rojopolis/spellcheck-github-actions@0bf4b2f91efa259b52c202b09b0c3845c524ff36 # 0.58.0
