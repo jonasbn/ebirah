@@ -44,3 +44,4 @@ ebirah.code-workspace
 .jekyll-metadata
 .ruby-version
 _site/
+.env
