@@ -1,3 +1,4 @@
+# check=skip=InvalidDefaultArgInFrom
 
 ARG BASE_IMAGE=perl:5.40.2-slim-bookworm@sha256:ffca6fbf5d40c2dc3dac0fc11640e29feaabef54cf274e3d4cb24204ae62ccc2
 FROM ${BASE_IMAGE}
