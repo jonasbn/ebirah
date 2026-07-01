@@ -49,6 +49,14 @@ markdownlint --config .markdownlint.json README.md CHANGELOG.md
 ### CI/CD
 - **ci.yml**: Runs on push/PR — checks Markdown linting (`.markdownlint.json`) and spell checking (`.spellcheck.yml` with `.wordlist.txt`/`dictionary.dic`)
 - **publish.yml**: Triggered on push to `master` and version tags (`*.*.*`) — builds multi-platform images (`linux/amd64`, `linux/arm64`) and pushes to DockerHub (`jonasbn/ebirah`) and GHCR (`ghcr.io/jonasbn/ebirah`)
+  - GHCR login uses `secrets.GITHUB_TOKEN` (not a PAT); the old `CR_PAT` secret still exists in the repo but is unused
+  - Multi-platform builds take ~7–10 minutes to complete
+
+### Debugging CI failures
+```bash
+gh run view <run-id> --log-failed   # shows only the failed step logs
+gh run list --workflow publish.yml  # filter runs by workflow file
+```
 
 ### Documentation site
 The `Gemfile` powers a Jekyll/GitHub Pages documentation site (Ruby 2.7.7, specified in `.ruby-version`). The site is not part of the Docker build.
