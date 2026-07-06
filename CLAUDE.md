@@ -76,5 +76,4 @@ The `Gemfile` powers a Jekyll/GitHub Pages documentation site (Ruby 2.7.7, speci
 | `.markdownlint.json` | Disables line-length rule, enables commands output |
 | `.spellcheck.yml` | Aspell config scoped to Markdown files |
 | `.wordlist.txt` | Custom spell-check word allowlist |
-| `dictionary.dic` | Compiled aspell dictionary (binary, keep in sync with `.wordlist.txt`) |
 | `docs/TODO.md` | Open issue tracker mirroring GitHub issues |
