@@ -29,8 +29,14 @@ docker run --rm -v $PWD:/opt jonasbn/ebirah dzil test
 # Markdown lint — requires markdownlint-cli
 markdownlint --config .markdownlint.json README.md CHANGELOG.md
 
-# Spell check — runs via CI using .spellcheck.yml
+# Spell check — requires pyspelling + aspell
+pyspelling -c .spellcheck.yml
 ```
+
+### Adding words to the spell-check dictionary
+When CI fails with a misspelled word, add it to `.wordlist.txt` (one per line) and re-run `pyspelling -c .spellcheck.yml` to confirm the allowlist entry fixes the failure.
+
+Note: `CLAUDE.md` and `.claude/**/*.md` are excluded from spell checking (see `.spellcheck.yml`).
 
 ## Architecture
 
@@ -69,3 +75,5 @@ The `Gemfile` powers a Jekyll/GitHub Pages documentation site (Ruby 2.7.7, speci
 | `cpanfile` | Perl runtime dependencies for Dist::Zilla and plugins |
 | `.markdownlint.json` | Disables line-length rule, enables commands output |
 | `.spellcheck.yml` | Aspell config scoped to Markdown files |
+| `.wordlist.txt` | Custom spell-check word allowlist |
+| `docs/TODO.md` | Open issue tracker mirroring GitHub issues |
