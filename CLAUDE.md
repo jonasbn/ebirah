@@ -34,10 +34,7 @@ pyspelling -c .spellcheck.yml
 ```
 
 ### Adding words to the spell-check dictionary
-When CI fails with a misspelled word, add it to **both** files:
-1. `.wordlist.txt` — append the word (one per line)
-2. `dictionary.dic` — rebuild with aspell: `aspell --lang=en create master ./ < .wordlist.txt`
-   *(Or update the compiled binary locally and commit it — it is checked in.)*
+When CI fails with a misspelled word, add it to `.wordlist.txt` (one per line) and re-run `pyspelling -c .spellcheck.yml` to confirm the allowlist entry fixes the failure.
 
 Note: `CLAUDE.md` and `.claude/**/*.md` are excluded from spell checking (see `.spellcheck.yml`).
 
