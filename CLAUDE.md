@@ -57,6 +57,7 @@ Note: `CLAUDE.md` and `.claude/**/*.md` are excluded from spell checking (see `.
 - **publish.yml**: Triggered on push to `master` and version tags (`*.*.*`) — builds multi-platform images (`linux/amd64`, `linux/arm64`) and pushes to DockerHub (`jonasbn/ebirah`) and GHCR (`ghcr.io/jonasbn/ebirah`)
   - GHCR login uses `secrets.GITHUB_TOKEN` (not a PAT); the old `CR_PAT` secret still exists in the repo but is unused
   - Multi-platform builds take ~7–10 minutes to complete
+- **zizmor.yml**: Runs on push to `master` and all PRs — statically analyzes every workflow/action under `.github/` with [zizmor](https://woodruffw.github.io/zizmor/) via `zizmorcore/zizmor-action`, uploading findings to the repo's Code Scanning (Security) tab; does not fail the build on findings (public repo → Advanced Security is free)
 
 ### Debugging CI failures
 ```bash

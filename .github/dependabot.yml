@@ -13,6 +13,8 @@ updates:
     # Assign pull requests to an assignee
     assignees:
       - "jonasbn"
+    cooldown:
+      default-days: 7
   # Enable version updates for Actions
   - package-ecosystem: "github-actions"
     # Look for `.github/workflows` in the `root` directory
@@ -20,3 +22,5 @@ updates:
     # Check for updates once a week
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 7
