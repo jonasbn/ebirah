@@ -2,12 +2,18 @@ name: Continuous Integration (CI)
 
 on: [push, pull_request]
 
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   documentation:
     name: Check documentation integrity and spelling
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: read # checkout the repository
     steps:
     - name: Checkout repository
       uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
