@@ -1,8 +1,16 @@
 # Change log for Ebirah
 
-## 0.12.1 2025-05-18 Bug fix release, update not required
+## 0.13.0 2026-07-31 Maintenance and security release, update recommended
 
-- This fixes a few problem with use of the wrong pin for the base image, which should be the one available from DockerHub and not GitHub
+- Fixes the wrong pin for the base image, which should be the one available from DockerHub and not GitHub (this was previously documented as an 0.12.1 release, but never actually tagged/shipped — the fix is included here instead)
+
+- Added a `zizmor` workflow which statically analyzes all GitHub Actions workflows and actions on every push to `master` and on PRs, uploading findings to the repository's Code Scanning tab
+
+- Fixed all findings raised by `zizmor`: credential persistence on `actions/checkout` steps, missing/overly broad workflow permissions, missing concurrency limits, and insufficient Dependabot cooldown
+
+- `DOCKERHUB_USERNAME`/`DOCKERHUB_TOKEN` are now scoped to a dedicated `dockerhub-release` GitHub environment instead of being available repository-wide
+
+- Routine GitHub Actions version bumps via @dependabot: `actions/checkout`, `docker/login-action`, `docker/metadata-action`, `docker/setup-qemu-action`, `docker/setup-buildx-action`, `rojopolis/spellcheck-github-actions`
 
 ## 0.12.0 2025-05-18 Maintenance release, update not required
 
