@@ -19,6 +19,7 @@ jobs:
   publish:
     name: Build and publish Docker images
     runs-on: ubuntu-latest
+    environment: dockerhub-release
 
     permissions:
       contents: read # checkout the repository
