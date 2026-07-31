@@ -4,18 +4,25 @@ name: Publish to DockerHub and GitHub
 
 on:
   push:
-    branches: 
+    branches:
     - master
     tags:
       - "*.*.*"
 
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   publish:
+    name: Build and publish Docker images
     runs-on: ubuntu-latest
 
     permissions:
-      contents: read
-      packages: write
+      contents: read # checkout the repository
+      packages: write # push images to GHCR
 
     steps:
       - name: Docker meta
