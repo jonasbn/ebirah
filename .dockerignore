@@ -13,7 +13,6 @@ CODE_OF_CONDUCT.md
 .github/PULL_REQUEST_TEMPLATE.md
 .github/auto_assign.yml
 .github/dependabot.yml
-.github/renovate.json
 .github/workflows
 .github/workflows/markdownlint.yml
 .github/workflows/publish.yml
