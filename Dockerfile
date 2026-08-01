@@ -1,6 +1,6 @@
 # check=skip=InvalidDefaultArgInFrom
 
-ARG BASE_IMAGE=perl:5.40.2-slim-bookworm@sha256:ffca6fbf5d40c2dc3dac0fc11640e29feaabef54cf274e3d4cb24204ae62ccc2
+ARG BASE_IMAGE=perl:5.44.0-slim-trixie@sha256:c9aac2fcb8612b25b818df998413423eecf15d8d5175c98d1c10a069ac7e7f8f
 FROM ${BASE_IMAGE}
 
 # REF: https://docs.docker.com/engine/reference/builder/
@@ -9,13 +9,13 @@ FROM ${BASE_IMAGE}
 
 # We point to the original repository for the image
 LABEL org.opencontainers.image.source="https://github.com/jonasbn/ebirah"
-LABEL org.opencontainers.image.base.name="registry.hub.docker.com/library/perl:5.40.2-bookworm"
+LABEL org.opencontainers.image.base.name="registry.hub.docker.com/library/perl:5.44.0-slim-trixie"
 LABEL org.opencontainers.image.url="https://github.com/jonasbn/ebirah"
 LABEL org.opencontainers.image.title="ebirah"
 LABEL org.opencontainers.image.description="Experimental Docker image for Dist::Zilla"
 
 ENV DEBIAN_FRONTEND=noninteractive RUNNER_GROUP=distzilla RUNNER_USER=runner
-RUN apt-get update && apt-get upgrade -y && apt-get install build-essential -y && apt-get autoremove -y && \
+RUN apt-get update && apt-get upgrade -y && apt-get install build-essential adduser -y && apt-get autoremove -y && \
     apt-get clean -y && rm -rf /var/lib/apt/lists/* && addgroup "$RUNNER_GROUP" && \
     adduser --ingroup "$RUNNER_GROUP" --home /home/runner --shell /bin/bash \
     --disabled-password --gecos '' runner
