@@ -1,4 +1,5 @@
 # REF: https://github.com/marketplace/actions/build-and-push-docker-images
+# REF: https://github.com/docker/github-builder
 
 name: Publish to DockerHub and GitHub
 
@@ -8,6 +9,7 @@ on:
       - master
     tags:
       - "*.*.*"
+  pull_request:
 
 permissions: {}
 
@@ -18,69 +20,101 @@ concurrency:
 jobs:
   publish:
     name: Build and publish Docker images
+    uses: docker/github-builder/.github/workflows/build.yml@27ade872c1e2296e62ef15ab3b10d37665e57cf7 # v1.15.0
+    permissions:
+      contents: read # checkout the repository
+      packages: write # push images to GHCR
+      id-token: write # sign attestations/cache entries and authenticate to registries
+    with:
+      output: image
+      push: ${{ github.event_name != 'pull_request' }}
+      # native per-platform runners by default (linux/arm64 -> ubuntu-24.04-arm),
+      # no QEMU emulation needed
+      platforms: linux/amd64,linux/arm64
+      # GHCR only here: environment-scoped secrets (DockerHub) aren't reachable
+      # from a job that calls a reusable workflow, see the mirror job below
+      meta-images: |
+        ghcr.io/jonasbn/ebirah
+      # generate Docker tags based on the following events/attributes
+      meta-tags: |
+        type=schedule
+        type=ref,event=branch
+        type=ref,event=pr
+        type=semver,pattern={{version}}
+        type=semver,pattern={{major}}.{{minor}}.{{patch}}
+        type=semver,pattern={{major}}.{{minor}}
+        type=semver,pattern={{major}}
+        type=sha
+      set-meta-labels: true
+      # persist layers (including the cpanm/Dist::Zilla install layer) across
+      # runs via the GitHub Actions cache backend
+      cache: true
+      cache-mode: max
+    secrets:
+      registry-auths: |
+        - registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+  mirror-to-dockerhub:
+    name: Mirror image to DockerHub
+    needs: publish
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment: dockerhub-release
 
     permissions:
-      contents: read # checkout the repository
-      packages: write # push images to GHCR
+      contents: read # not used directly, kept minimal
+      packages: read # pull the manifest from GHCR
 
     steps:
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0
-        with:
-          # list of Docker images to use as base name for tags
-          images: |
-            jonasbn/ebirah
-            ghcr.io/jonasbn/ebirah
-          # generate Docker tags based on the following events/attributes
-          tags: |
-            type=schedule
-            type=ref,event=branch
-            type=ref,event=pr
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}.{{patch}}
-            type=semver,pattern={{major}}.{{minor}}
-            type=semver,pattern={{major}}
-            type=sha    
-
-      # Checkout the repository, not required by the Docker build parts, but for the publication of the Docker README
-      - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@96fe6ef7f33517b61c61be40b68a1882f3264fb8 # v4.2.0
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@bb05f3f5519dd87d3ba754cc423b652a5edd6d2c # v4.2.0
 
-      - name: Login to DockerHub
-        if: github.event_name != 'pull_request'
-        uses: docker/login-action@abd2ef45e78c5afb21d64d4ca52ee8550d9572c7 # v4.5.1
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
       - name: Login to GitHub Container Registry (GHCR)
-        if: github.event_name != 'pull_request'
         uses: docker/login-action@abd2ef45e78c5afb21d64d4ca52ee8550d9572c7 # v4.5.1
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push to multiple registries
-        uses: docker/build-push-action@53b7df96c91f9c12dcc8a07bcb9ccacbed38856a # v7.3.0
+      - name: Login to DockerHub
+        uses: docker/login-action@abd2ef45e78c5afb21d64d4ca52ee8550d9572c7 # v4.5.1
         with:
-          push: ${{ github.event_name != 'pull_request' }}
-          platforms: linux/amd64,linux/arm64
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          provenance: false # Disable provenance to avoid unknown/unknown
-          sbom: false       # Disable provenance to avoid unknown/unknown
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # Copies the already-built multi-arch manifest straight from GHCR to
+      # DockerHub -- no rebuild, just a registry-to-registry manifest/blob
+      # copy under each tag docker/metadata-action generated for this push.
+      - name: Copy multi-arch manifest from GHCR to DockerHub
+        env:
+          META_JSON: ${{ needs.publish.outputs.meta-json }}
+        run: |
+          set -euo pipefail
+          mapfile -t ghcr_tags < <(jq -r '.tags[]' <<<"$META_JSON")
+          source="${ghcr_tags[0]}"
+          tag_args=()
+          for tag in "${ghcr_tags[@]}"; do
+            tag_args+=(--tag "jonasbn/ebirah:${tag#ghcr.io/jonasbn/ebirah:}")
+          done
+          docker buildx imagetools create "${tag_args[@]}" "$source"
+
+  update-dockerhub-description:
+    name: Update description on DockerHub
+    needs: mirror-to-dockerhub
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    environment: dockerhub-release
+
+    permissions:
+      contents: read # checkout the repository
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Update description on DockerHub
         uses: peter-evans/dockerhub-description@1b9a80c056b620d92cedb9d9b5a223409c68ddfa # v5.0.0
