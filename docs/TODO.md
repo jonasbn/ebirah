@@ -14,5 +14,4 @@ Open issues tracked in the [GitHub issue tracker](https://github.com/jonasbn/ebi
 
 ## Other
 
-- [ ] [#35 Dependency Dashboard](https://github.com/jonasbn/ebirah/issues/35)
 - [ ] [#192 Consider dropping apt-get upgrade -y for build reproducibility](https://github.com/jonasbn/ebirah/issues/192)
