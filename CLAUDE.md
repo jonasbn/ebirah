@@ -47,6 +47,10 @@ Note: `CLAUDE.md` and `.claude/**/*.md` are excluded from spell checking (see `.
 - **Default command**: `dzil version`
 - **Perl dependencies**: Managed via `cpanfile` and installed with `cpanm` into a user-local library
 
+### Bumping the Perl base image
+- Pin the multi-arch **index** digest, not a per-platform one — `publish.yml` builds `linux/amd64` and `linux/arm64`: `docker buildx imagetools inspect perl:<tag>` and use the top-level `Digest:` value
+- Test-build locally before committing: `docker build --build-arg BASE_IMAGE=perl:<tag>@sha256:<digest> -t ebirah-test .` — Debian codename jumps can break the build (e.g., `trixie-slim` dropped the `adduser` package that `bookworm-slim` shipped by default, breaking the `addgroup`/`adduser` user-creation step)
+
 ### Supported dzil commands
 `help`, `commands`, `new`, `build`, `clean`, `test`, `smoke`, `install`, `add`, `listdeps`, `authordeps`, `run`, `nop`, `xtest`
 
@@ -59,6 +63,7 @@ Note: `CLAUDE.md` and `.claude/**/*.md` are excluded from spell checking (see `.
   - Multi-platform builds take ~7–10 minutes to complete
   - The `publish` job runs under the `dockerhub-release` environment; `DOCKERHUB_USERNAME`/`DOCKERHUB_TOKEN` are environment secrets scoped to it, not repository-level secrets
 - **zizmor.yml**: Runs on push to `master` and PRs — statically analyzes every workflow/action under `.github/` with [zizmor](https://woodruffw.github.io/zizmor/) via `zizmorcore/zizmor-action`, uploading findings to the repo's Code Scanning (Security) tab (note: forked PRs may not be able to upload due to `security-events: write` restrictions); does not fail the build on findings (public repo → Advanced Security is free)
+- **Branch protection (`master`)**: requires the `ci.yml` and `zizmor.yml` status checks to pass before merge; `enforce_admins` is off (repo owner can override); repo-wide merge method is **squash-only** (merge commit and rebase are disabled) — solo-maintainer repo, so PR reviews are not required
 
 ### Debugging CI failures
 ```bash
