@@ -25,16 +25,15 @@ jobs:
       contents: read # checkout the repository
       packages: write # push images to GHCR
       id-token: write # sign attestations/cache entries and authenticate to registries
-    environment: dockerhub-release
     with:
       output: image
       push: ${{ github.event_name != 'pull_request' }}
       # native per-platform runners by default (linux/arm64 -> ubuntu-24.04-arm),
       # no QEMU emulation needed
       platforms: linux/amd64,linux/arm64
-      # list of Docker images to use as base name for tags
+      # GHCR only here: environment-scoped secrets (DockerHub) aren't reachable
+      # from a job that calls a reusable workflow, see the mirror job below
       meta-images: |
-        jonasbn/ebirah
         ghcr.io/jonasbn/ebirah
       # generate Docker tags based on the following events/attributes
       meta-tags: |
@@ -53,16 +52,57 @@ jobs:
       cache-mode: max
     secrets:
       registry-auths: |
-        - registry: docker.io
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
         - registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+  mirror-to-dockerhub:
+    name: Mirror image to DockerHub
+    needs: publish
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    environment: dockerhub-release
+
+    permissions:
+      contents: read # not used directly, kept minimal
+      packages: read # pull the manifest from GHCR
+
+    steps:
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@bb05f3f5519dd87d3ba754cc423b652a5edd6d2c # v4.2.0
+
+      - name: Login to GitHub Container Registry (GHCR)
+        uses: docker/login-action@abd2ef45e78c5afb21d64d4ca52ee8550d9572c7 # v4.5.1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Login to DockerHub
+        uses: docker/login-action@abd2ef45e78c5afb21d64d4ca52ee8550d9572c7 # v4.5.1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # Copies the already-built multi-arch manifest straight from GHCR to
+      # DockerHub -- no rebuild, just a registry-to-registry manifest/blob
+      # copy under each tag docker/metadata-action generated for this push.
+      - name: Copy multi-arch manifest from GHCR to DockerHub
+        env:
+          META_JSON: ${{ needs.publish.outputs.meta-json }}
+        run: |
+          set -euo pipefail
+          mapfile -t ghcr_tags < <(jq -r '.tags[]' <<<"$META_JSON")
+          source="${ghcr_tags[0]}"
+          tag_args=()
+          for tag in "${ghcr_tags[@]}"; do
+            tag_args+=(--tag "jonasbn/ebirah:${tag#ghcr.io/jonasbn/ebirah:}")
+          done
+          docker buildx imagetools create "${tag_args[@]}" "$source"
+
   update-dockerhub-description:
     name: Update description on DockerHub
-    needs: publish
+    needs: mirror-to-dockerhub
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment: dockerhub-release
