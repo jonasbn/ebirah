@@ -9,7 +9,7 @@ FROM ${BASE_IMAGE}
 
 # We point to the original repository for the image
 LABEL org.opencontainers.image.source="https://github.com/jonasbn/ebirah"
-LABEL org.opencontainers.image.base.name="registry.hub.docker.com/library/perl:5.44.0-trixie"
+LABEL org.opencontainers.image.base.name="registry.hub.docker.com/library/perl:5.44.0-slim-trixie"
 LABEL org.opencontainers.image.url="https://github.com/jonasbn/ebirah"
 LABEL org.opencontainers.image.title="ebirah"
 LABEL org.opencontainers.image.description="Experimental Docker image for Dist::Zilla"
