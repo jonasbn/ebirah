@@ -20,7 +20,7 @@ concurrency:
 jobs:
   publish:
     name: Build and publish Docker images
-    uses: docker/github-builder/.github/workflows/build.yml@27ade872c1e2296e62ef15ab3b10d37665e57cf7 # v1.15.0
+    uses: docker/github-builder/.github/workflows/build.yml@a492c6d04fd3315f67230809b44d60cc0acd50b3 # v1.16.0
     permissions:
       contents: read # checkout the repository
       packages: write # push images to GHCR
